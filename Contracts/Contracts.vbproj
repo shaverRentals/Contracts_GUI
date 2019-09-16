@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79F9B179-55AB-4FAB-861C-6FA89A3C53C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Contracts.My.MyApplication</StartupObject>
+    <RootNamespace>Contracts</RootNamespace>
+    <AssemblyName>Contracts</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>C:\Users\shave\Documents\Published_APPS\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>30</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Contracts.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Contracts.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>54CEFC307726ED3003D0490B29B68972EA72D3A2</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Contracts_3_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Contracts.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Contracts.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WyoSendGmail">
+      <HintPath>..\..\WyoSendGmail\WyoSendGmail\bin\Debug\WyoSendGmail.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Cls_Context.vb" />
+    <Compile Include="cls_ManageConnectionStrings.vb" />
+    <Compile Include="cls_Reports.vb" />
+    <Compile Include="cls_Stored_Procedures.vb" />
+    <Compile Include="frm_Estimated_Tax.Designer.vb">
+      <DependentUpon>frm_Estimated_Tax.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Estimated_Tax.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Base_Code.Designer.vb">
+      <DependentUpon>frm_Base_Code.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Base_Code.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Contractors.Designer.vb">
+      <DependentUpon>frm_Contractors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Contractors.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Contracts.Designer.vb">
+      <DependentUpon>frm_Contracts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Contracts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Contracts_Hours.Designer.vb">
+      <DependentUpon>frm_Contracts_Hours.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Contracts_Hours.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Contract_Tasks.Designer.vb">
+      <DependentUpon>frm_Contract_Tasks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Contract_Tasks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Deliverables.Designer.vb">
+      <DependentUpon>frm_Deliverables.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Deliverables.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Expense.Designer.vb">
+      <DependentUpon>frm_Expense.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Expense.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_HoursToday.Designer.vb">
+      <DependentUpon>frm_HoursToday.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_HoursToday.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Income.Designer.vb">
+      <DependentUpon>frm_Income.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Income.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Invoice.Designer.vb">
+      <DependentUpon>frm_Invoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Invoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ManageDBConn.Designer.vb">
+      <DependentUpon>frm_ManageDBConn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ManageDBConn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Manage_BU_Folder.Designer.vb">
+      <DependentUpon>frm_Manage_BU_Folder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Manage_BU_Folder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Retirement.Designer.vb">
+      <DependentUpon>frm_Retirement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Retirement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Version.Designer.vb">
+      <DependentUpon>frm_Version.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Version.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_QuickHelp.Designer.vb">
+      <DependentUpon>frm_QuickHelp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_QuickHelp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Reports.Designer.vb">
+      <DependentUpon>Frm_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Splash.Designer.vb">
+      <DependentUpon>frm_Splash.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EFM_Contracts.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFM_Contracts.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SwitchBoard.Designer.vb">
+      <DependentUpon>frm_SwitchBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SwitchBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mod_Constants.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frm_Base_Code.resx">
+      <DependentUpon>frm_Base_Code.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Contractors.resx">
+      <DependentUpon>frm_Contractors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Contracts.resx">
+      <DependentUpon>frm_Contracts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Contracts_Hours.resx">
+      <DependentUpon>frm_Contracts_Hours.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Contract_Tasks.resx">
+      <DependentUpon>frm_Contract_Tasks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Deliverables.resx">
+      <DependentUpon>frm_Deliverables.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Estimated_Tax.resx">
+      <DependentUpon>frm_Estimated_Tax.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Expense.resx">
+      <DependentUpon>frm_Expense.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_HoursToday.resx">
+      <DependentUpon>frm_HoursToday.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Income.resx">
+      <DependentUpon>frm_Income.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Invoice.resx">
+      <DependentUpon>frm_Invoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ManageDBConn.resx">
+      <DependentUpon>frm_ManageDBConn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Manage_BU_Folder.resx">
+      <DependentUpon>frm_Manage_BU_Folder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Retirement.resx">
+      <DependentUpon>frm_Retirement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Version.resx">
+      <DependentUpon>frm_Version.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_QuickHelp.resx">
+      <DependentUpon>frm_QuickHelp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Reports.resx">
+      <DependentUpon>Frm_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Splash.resx">
+      <DependentUpon>frm_Splash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SwitchBoard.resx">
+      <DependentUpon>frm_SwitchBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="EFM_Contracts.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EFM_Contracts.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Contracts_1_TemporaryKey.pfx" />
+    <None Include="Contracts_2_TemporaryKey.pfx" />
+    <None Include="Contracts_3_TemporaryKey.pfx" />
+    <None Include="Contracts_TemporaryKey.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\Cls_Context.datasource" />
+    <None Include="My Project\DataSources\cls_ManageConnectionStrings.datasource" />
+    <None Include="My Project\DataSources\cls_Reports.datasource" />
+    <None Include="My Project\DataSources\cls_Stored_Procedures.datasource" />
+    <None Include="My Project\DataSources\Contract.datasource" />
+    <None Include="My Project\DataSources\Contractee.datasource" />
+    <None Include="My Project\DataSources\Contractor.datasource" />
+    <None Include="My Project\DataSources\Contracts.My.MyApplication.datasource" />
+    <None Include="My Project\DataSources\Contracts.My.MySettings.datasource" />
+    <None Include="My Project\DataSources\ContractsEntities.datasource" />
+    <None Include="My Project\DataSources\ContractsEntities1.datasource" />
+    <None Include="My Project\DataSources\ContractsEntities2.datasource" />
+    <None Include="My Project\DataSources\Contracts_Hours.datasource" />
+    <None Include="My Project\DataSources\Contracts_Rate.datasource" />
+    <None Include="My Project\DataSources\Contract_Rate_Freq_LU.datasource" />
+    <None Include="My Project\DataSources\Contract_Status_LU.datasource" />
+    <None Include="My Project\DataSources\C__RefactorLog.datasource" />
+    <None Include="My Project\DataSources\Deliverable.datasource" />
+    <None Include="My Project\DataSources\Deliverable_Status_Lu.datasource" />
+    <None Include="My Project\DataSources\DFS_Hours.datasource" />
+    <None Include="My Project\DataSources\DFS_Hours1.datasource" />
+    <None Include="My Project\DataSources\Estimated_Tax_payments.datasource" />
+    <None Include="My Project\DataSources\Expenses.datasource" />
+    <None Include="My Project\DataSources\Expense_Type_LU.datasource" />
+    <None Include="My Project\DataSources\frm_Base_Code.datasource" />
+    <None Include="My Project\DataSources\frm_Base_Code.FilterType.datasource" />
+    <None Include="My Project\DataSources\frm_Contractors.datasource" />
+    <None Include="My Project\DataSources\frm_Contracts.datasource" />
+    <None Include="My Project\DataSources\frm_Contracts_Hours.datasource" />
+    <None Include="My Project\DataSources\frm_Contract_Tasks.datasource" />
+    <None Include="My Project\DataSources\frm_Deliverables.datasource" />
+    <None Include="My Project\DataSources\frm_DFS_Hours.datasource" />
+    <None Include="My Project\DataSources\frm_Estimated_Tax.datasource" />
+    <None Include="My Project\DataSources\frm_Expense.datasource" />
+    <None Include="My Project\DataSources\frm_HoursToday.datasource" />
+    <None Include="My Project\DataSources\frm_income.datasource" />
+    <None Include="My Project\DataSources\frm_Invoice.datasource" />
+    <None Include="My Project\DataSources\frm_ManageDBConn.datasource" />
+    <None Include="My Project\DataSources\frm_Manage_BU_Folder.datasource" />
+    <None Include="My Project\DataSources\frm_QuickHelp.datasource" />
+    <None Include="My Project\DataSources\Frm_Reports.datasource" />
+    <None Include="My Project\DataSources\frm_Retirement.datasource" />
+    <None Include="My Project\DataSources\frm_Splash.datasource" />
+    <None Include="My Project\DataSources\frm_SwitchBoard.datasource" />
+    <None Include="My Project\DataSources\frm_Version.datasource" />
+    <None Include="My Project\DataSources\Income.datasource" />
+    <None Include="My Project\DataSources\Invoice_Header.datasource" />
+    <None Include="My Project\DataSources\Quarter_LU.datasource" />
+    <None Include="My Project\DataSources\Report.datasource" />
+    <None Include="My Project\DataSources\Report_Types.datasource" />
+    <None Include="My Project\DataSources\Retirement.datasource" />
+    <None Include="My Project\DataSources\Retirement_Account_LU.datasource" />
+    <None Include="My Project\DataSources\sysdiagram.datasource" />
+    <None Include="My Project\DataSources\Task.datasource" />
+    <None Include="My Project\DataSources\Task_Status_LU.datasource" />
+    <None Include="My Project\DataSources\Version.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

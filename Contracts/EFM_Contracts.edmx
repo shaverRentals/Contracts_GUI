@@ -1,0 +1,1476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ContractsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contract_Rate_Freq_LU">
+          <Key>
+            <PropertyRef Name="KY_Rate_Freq" />
+          </Key>
+          <Property Name="KY_Rate_Freq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Desc_Rate_Freq" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contract_Status_LU">
+          <Key>
+            <PropertyRef Name="KY_Status_Contract" />
+          </Key>
+          <Property Name="KY_Status_Contract" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Desc_Contract_Status" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contractee">
+          <Key>
+            <PropertyRef Name="KY_Contractee" />
+          </Key>
+          <Property Name="KY_Contractee" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_Contractee" Type="varchar(max)" Nullable="false" />
+          <Property Name="Email_Contractee" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address_Contractee_Street" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Address_Contractee_City" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Address_Contractee_State" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Adress_Contractee_Zip" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contractors">
+          <Key>
+            <PropertyRef Name="KY_Contractor" />
+          </Key>
+          <Property Name="KY_Contractor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Primary_Contact_Contractor" Type="varchar(max)" />
+          <Property Name="Name_Contractor" Type="varchar(max)" />
+          <Property Name="Phone_Contractor" Type="varchar" MaxLength="50" />
+          <Property Name="Email_Contractor" Type="varchar(max)" />
+          <Property Name="Address_Contractor" Type="varchar(max)" />
+          <Property Name="Adress_Contractor_2" Type="varchar" MaxLength="50" />
+          <Property Name="City_Contractor" Type="varchar" MaxLength="50" />
+          <Property Name="State_Contractor" Type="varchar" MaxLength="50" />
+          <Property Name="Zip_Contractor" Type="varchar" MaxLength="50" />
+          <Property Name="Notes_Contractor" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Contracts">
+          <Key>
+            <PropertyRef Name="KY_Contracts" />
+          </Key>
+          <Property Name="KY_Contracts" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KY_Contractor" Type="int" Nullable="false" />
+          <Property Name="Name_Contract" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date_Contract_Begin" Type="date" Nullable="false" />
+          <Property Name="Date_Contract_End" Type="date" Nullable="false" />
+          <Property Name="Hours_Contract_Total" Type="int" Nullable="false" />
+          <Property Name="Money_Contract_Total" Type="money" Nullable="false" />
+          <Property Name="KY_Status_Contract" Type="int" Nullable="false" />
+          <Property Name="Contract_Notes" Type="varchar(max)" />
+          <Property Name="Desc_Contract_Services" Type="varchar(max)" />
+          <Property Name="KY_Rate" Type="int" Nullable="false" />
+          <Property Name="KY_Contractee" Type="int" Nullable="false" />
+          <Property Name="KY_Rate_Freq" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contracts_Hours">
+          <Key>
+            <PropertyRef Name="KY_Contracts_Hours" />
+          </Key>
+          <Property Name="KY_Contracts_Hours" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KY_Contracts" Type="int" Nullable="false" />
+          <Property Name="Date_Hours_Workd" Type="date" Nullable="false" />
+          <Property Name="Contracts_Hours" Type="float" Nullable="false" />
+          <Property Name="Desc_Contracts_Hours" Type="varchar(max)" Nullable="false" />
+          <Property Name="Cat_Month" Type="date" />
+        </EntityType>
+        <EntityType Name="Contracts_Rate">
+          <Key>
+            <PropertyRef Name="KY_Rate" />
+          </Key>
+          <Property Name="KY_Rate" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Amount_rate" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Deliverable">
+          <Key>
+            <PropertyRef Name="KY_Deliverable" />
+          </Key>
+          <Property Name="KY_Deliverable" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KY_Contracts" Type="int" Nullable="false" />
+          <Property Name="Name_Deliverable" Type="varchar(max)" Nullable="false" />
+          <Property Name="Date_Deliverable_Due" Type="date" />
+          <Property Name="Total_Hours_Deliverable" Type="int" />
+          <Property Name="Notes_Deliverable" Type="varchar(max)" />
+          <Property Name="KY_Status_Deliverable" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Deliverable_Status_Lu">
+          <Key>
+            <PropertyRef Name="KY_Status_Deliverable" />
+          </Key>
+          <Property Name="KY_Status_Deliverable" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Desc_Deliverable" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DFS_Hours">
+          <Key>
+            <PropertyRef Name="KY_DFS_Hours" />
+          </Key>
+          <Property Name="KY_DFS_Hours" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="int_Hours" Type="float" Nullable="false" />
+          <Property Name="Desc_Hours" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="dt_Hours_Entered" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Estimated_Tax_payments">
+          <Key>
+            <PropertyRef Name="KY_Estimated_Taxes" />
+          </Key>
+          <Property Name="KY_Estimated_Taxes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date_Est_Tax_Paid" Type="date" />
+          <Property Name="Amount_Estimated_Tax" Type="money" />
+          <Property Name="KY_Quarter_LU" Type="int" />
+          <Property Name="Tax_Year" Type="varchar" MaxLength="4" />
+          <Property Name="Img_Path_Est_Tax" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Expense_Type_LU">
+          <Key>
+            <PropertyRef Name="KY_Expense_Type" />
+          </Key>
+          <Property Name="KY_Expense_Type" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Expense_Type" Type="varchar(max)" />
+          <Property Name="IRS_Number" Type="varchar" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="Expenses">
+          <Key>
+            <PropertyRef Name="KY_Expense" />
+          </Key>
+          <Property Name="KY_Expense" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KY_Contractee" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="money" Nullable="false" />
+          <Property Name="Date_Expense" Type="date" Nullable="false" />
+          <Property Name="Description_Expense" Type="varchar(max)" />
+          <Property Name="Img_Path_Expense" Type="varchar(max)" />
+          <Property Name="KY_Expense_Type" Type="int" Nullable="false" />
+          <Property Name="Tax_Year_Expense" Type="varchar" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="Income">
+          <Key>
+            <PropertyRef Name="KY_Income" />
+          </Key>
+          <Property Name="KY_Income" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KY_Contracts" Type="int" Nullable="false" />
+          <Property Name="Date_Income" Type="date" Nullable="false" />
+          <Property Name="Amount_Income" Type="money" Nullable="false" />
+          <Property Name="Check_Number_Income" Type="varchar" MaxLength="12" />
+          <Property Name="Tax_Year_Income" Type="int" />
+          <Property Name="Img_Path_Check" Type="varchar(max)" />
+          <Property Name="KY_Invoice_Header" Type="int" />
+          <Property Name="Cat_Month" Type="date" />
+        </EntityType>
+        <EntityType Name="Invoice_Header">
+          <Key>
+            <PropertyRef Name="KY_Invoice_Header" />
+          </Key>
+          <Property Name="KY_Invoice_Header" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KY_Contracts" Type="int" Nullable="false" />
+          <Property Name="Date_Invoice_Created" Type="date" Nullable="false" />
+          <Property Name="Date_Invoice_Begin" Type="date" Nullable="false" />
+          <Property Name="Date_Invoice_End" Type="date" Nullable="false" />
+          <Property Name="Desc_Invoice" Type="varchar(max)" Nullable="false" />
+          <Property Name="Invoice_Complete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Quarter_LU">
+          <Key>
+            <PropertyRef Name="KY_Quarter_LU" />
+          </Key>
+          <Property Name="KY_Quarter_LU" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Desc_quarter" Type="varchar" MaxLength="24" />
+        </EntityType>
+        <EntityType Name="Report_Types">
+          <Key>
+            <PropertyRef Name="KY_Report_Type" />
+          </Key>
+          <Property Name="KY_Report_Type" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DS_Report_Type" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Reports">
+          <Key>
+            <PropertyRef Name="KY_Report" />
+          </Key>
+          <Property Name="KY_Report" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KY_Report_Type" Type="int" Nullable="false" />
+          <Property Name="Name_report" Type="varchar(max)" Nullable="false" />
+          <Property Name="Path_Report" Type="varchar(max)" Nullable="false" />
+          <Property Name="Email_Subject" Type="varchar(max)" Nullable="false" />
+          <Property Name="Email_Body" Type="varchar(max)" Nullable="false" />
+          <Property Name="FileName_Report" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Retirement">
+          <Key>
+            <PropertyRef Name="KY_Retirement" />
+          </Key>
+          <Property Name="KY_Retirement" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date_Contribution" Type="date" />
+          <Property Name="Amount_Contribution" Type="money" />
+          <Property Name="KY_Retirement_Account" Type="int" />
+          <Property Name="Tax_Year" Type="varchar" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="Retirement_Account_LU">
+          <Key>
+            <PropertyRef Name="KY_Retirement_Account" />
+          </Key>
+          <Property Name="KY_Retirement_Account" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Desc_Retirement_Account" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Task_Status_LU">
+          <Key>
+            <PropertyRef Name="KY_Task_Status" />
+          </Key>
+          <Property Name="KY_Task_Status" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Desc_Task_Status" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tasks">
+          <Key>
+            <PropertyRef Name="KY_Tasks" />
+          </Key>
+          <Property Name="KY_Tasks" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KY_Contracts" Type="int" Nullable="false" />
+          <Property Name="KY_Task_Status" Type="int" Nullable="false" />
+          <Property Name="Desc_Tasks" Type="varchar(max)" Nullable="false" />
+          <Property Name="Date_Due_task" Type="date" />
+          <Property Name="Notes_Task" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Version">
+          <Key>
+            <PropertyRef Name="KY_Version" />
+          </Key>
+          <Property Name="KY_Version" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Number_Version" Type="varchar(max)" Nullable="false" />
+          <Property Name="Date_Version" Type="date" Nullable="false" />
+          <Property Name="Desc_Version" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Contracts_Hours_Contracts">
+          <End Role="Contracts" Type="Self.Contracts" Multiplicity="1" />
+          <End Role="Contracts_Hours" Type="Self.Contracts_Hours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contracts">
+              <PropertyRef Name="KY_Contracts" />
+            </Principal>
+            <Dependent Role="Contracts_Hours">
+              <PropertyRef Name="KY_Contracts" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Deliverable_Contracts">
+          <End Role="Contracts" Type="Self.Contracts" Multiplicity="1" />
+          <End Role="Deliverable" Type="Self.Deliverable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contracts">
+              <PropertyRef Name="KY_Contracts" />
+            </Principal>
+            <Dependent Role="Deliverable">
+              <PropertyRef Name="KY_Contracts" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Deliverable_Deliverable_Status_Lu">
+          <End Role="Deliverable_Status_Lu" Type="Self.Deliverable_Status_Lu" Multiplicity="1" />
+          <End Role="Deliverable" Type="Self.Deliverable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Deliverable_Status_Lu">
+              <PropertyRef Name="KY_Status_Deliverable" />
+            </Principal>
+            <Dependent Role="Deliverable">
+              <PropertyRef Name="KY_Status_Deliverable" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Expenses_Contractee">
+          <End Role="Contractee" Type="Self.Contractee" Multiplicity="1" />
+          <End Role="Expenses" Type="Self.Expenses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contractee">
+              <PropertyRef Name="KY_Contractee" />
+            </Principal>
+            <Dependent Role="Expenses">
+              <PropertyRef Name="KY_Contractee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Expenses_Expense_Type_LU">
+          <End Role="Expense_Type_LU" Type="Self.Expense_Type_LU" Multiplicity="1" />
+          <End Role="Expenses" Type="Self.Expenses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expense_Type_LU">
+              <PropertyRef Name="KY_Expense_Type" />
+            </Principal>
+            <Dependent Role="Expenses">
+              <PropertyRef Name="KY_Expense_Type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Income_Contracts">
+          <End Role="Contracts" Type="Self.Contracts" Multiplicity="1" />
+          <End Role="Income" Type="Self.Income" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contracts">
+              <PropertyRef Name="KY_Contracts" />
+            </Principal>
+            <Dependent Role="Income">
+              <PropertyRef Name="KY_Contracts" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Invoice_Header_Contracts">
+          <End Role="Contracts" Type="Self.Contracts" Multiplicity="1" />
+          <End Role="Invoice_Header" Type="Self.Invoice_Header" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contracts">
+              <PropertyRef Name="KY_Contracts" />
+            </Principal>
+            <Dependent Role="Invoice_Header">
+              <PropertyRef Name="KY_Contracts" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Quarter_LU">
+          <End Role="Quarter_LU" Type="Self.Quarter_LU" Multiplicity="0..1" />
+          <End Role="Estimated_Tax_payments" Type="Self.Estimated_Tax_payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Quarter_LU">
+              <PropertyRef Name="KY_Quarter_LU" />
+            </Principal>
+            <Dependent Role="Estimated_Tax_payments">
+              <PropertyRef Name="KY_Quarter_LU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reports_Report_Types">
+          <End Role="Report_Types" Type="Self.Report_Types" Multiplicity="1" />
+          <End Role="Reports" Type="Self.Reports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Report_Types">
+              <PropertyRef Name="KY_Report_Type" />
+            </Principal>
+            <Dependent Role="Reports">
+              <PropertyRef Name="KY_Report_Type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Retirement_Retirement_Account_LU">
+          <End Role="Retirement_Account_LU" Type="Self.Retirement_Account_LU" Multiplicity="0..1" />
+          <End Role="Retirement" Type="Self.Retirement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Retirement_Account_LU">
+              <PropertyRef Name="KY_Retirement_Account" />
+            </Principal>
+            <Dependent Role="Retirement">
+              <PropertyRef Name="KY_Retirement_Account" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tasks_Contracts">
+          <End Role="Contracts" Type="Self.Contracts" Multiplicity="1" />
+          <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contracts">
+              <PropertyRef Name="KY_Contracts" />
+            </Principal>
+            <Dependent Role="Tasks">
+              <PropertyRef Name="KY_Contracts" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tasks_Task_Status_LU">
+          <End Role="Task_Status_LU" Type="Self.Task_Status_LU" Multiplicity="1" />
+          <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Task_Status_LU">
+              <PropertyRef Name="KY_Task_Status" />
+            </Principal>
+            <Dependent Role="Tasks">
+              <PropertyRef Name="KY_Task_Status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ContractsModelStoreContainer">
+          <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contract_Rate_Freq_LU" EntityType="Self.Contract_Rate_Freq_LU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contract_Status_LU" EntityType="Self.Contract_Status_LU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contractee" EntityType="Self.Contractee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contractors" EntityType="Self.Contractors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contracts" EntityType="Self.Contracts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contracts_Hours" EntityType="Self.Contracts_Hours" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contracts_Rate" EntityType="Self.Contracts_Rate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Deliverable" EntityType="Self.Deliverable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Deliverable_Status_Lu" EntityType="Self.Deliverable_Status_Lu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DFS_Hours" EntityType="Self.DFS_Hours" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Estimated_Tax_payments" EntityType="Self.Estimated_Tax_payments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Expense_Type_LU" EntityType="Self.Expense_Type_LU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Expenses" EntityType="Self.Expenses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Income" EntityType="Self.Income" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Invoice_Header" EntityType="Self.Invoice_Header" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Quarter_LU" EntityType="Self.Quarter_LU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Report_Types" EntityType="Self.Report_Types" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reports" EntityType="Self.Reports" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Retirement" EntityType="Self.Retirement" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Retirement_Account_LU" EntityType="Self.Retirement_Account_LU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Task_Status_LU" EntityType="Self.Task_Status_LU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tasks" EntityType="Self.Tasks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Version" EntityType="Self.Version" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Contracts_Hours_Contracts" Association="Self.FK_Contracts_Hours_Contracts">
+            <End Role="Contracts" EntitySet="Contracts" />
+            <End Role="Contracts_Hours" EntitySet="Contracts_Hours" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Deliverable_Contracts" Association="Self.FK_Deliverable_Contracts">
+            <End Role="Contracts" EntitySet="Contracts" />
+            <End Role="Deliverable" EntitySet="Deliverable" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Deliverable_Deliverable_Status_Lu" Association="Self.FK_Deliverable_Deliverable_Status_Lu">
+            <End Role="Deliverable_Status_Lu" EntitySet="Deliverable_Status_Lu" />
+            <End Role="Deliverable" EntitySet="Deliverable" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Expenses_Contractee" Association="Self.FK_Expenses_Contractee">
+            <End Role="Contractee" EntitySet="Contractee" />
+            <End Role="Expenses" EntitySet="Expenses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Expenses_Expense_Type_LU" Association="Self.FK_Expenses_Expense_Type_LU">
+            <End Role="Expense_Type_LU" EntitySet="Expense_Type_LU" />
+            <End Role="Expenses" EntitySet="Expenses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Income_Contracts" Association="Self.FK_Income_Contracts">
+            <End Role="Contracts" EntitySet="Contracts" />
+            <End Role="Income" EntitySet="Income" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invoice_Header_Contracts" Association="Self.FK_Invoice_Header_Contracts">
+            <End Role="Contracts" EntitySet="Contracts" />
+            <End Role="Invoice_Header" EntitySet="Invoice_Header" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Quarter_LU" Association="Self.FK_Quarter_LU">
+            <End Role="Quarter_LU" EntitySet="Quarter_LU" />
+            <End Role="Estimated_Tax_payments" EntitySet="Estimated_Tax_payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reports_Report_Types" Association="Self.FK_Reports_Report_Types">
+            <End Role="Report_Types" EntitySet="Report_Types" />
+            <End Role="Reports" EntitySet="Reports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Retirement_Retirement_Account_LU" Association="Self.FK_Retirement_Retirement_Account_LU">
+            <End Role="Retirement_Account_LU" EntitySet="Retirement_Account_LU" />
+            <End Role="Retirement" EntitySet="Retirement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tasks_Contracts" Association="Self.FK_Tasks_Contracts">
+            <End Role="Contracts" EntitySet="Contracts" />
+            <End Role="Tasks" EntitySet="Tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tasks_Task_Status_LU" Association="Self.FK_Tasks_Task_Status_LU">
+            <End Role="Task_Status_LU" EntitySet="Task_Status_LU" />
+            <End Role="Tasks" EntitySet="Tasks" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ContractsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ContractsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DFS_Hours" EntityType="ContractsModel.DFS_Hours" />
+          <EntitySet Name="Contract_Status_LU" EntityType="ContractsModel.Contract_Status_LU" />
+          <EntitySet Name="Contractors" EntityType="ContractsModel.Contractor" />
+          <EntitySet Name="Contracts" EntityType="ContractsModel.Contract" />
+          <AssociationSet Name="FK_Contracts_Contract_Status_LU" Association="ContractsModel.FK_Contracts_Contract_Status_LU">
+            <End Role="Contract_Status_LU" EntitySet="Contract_Status_LU" />
+            <End Role="Contract" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contracts_Contractors" Association="ContractsModel.FK_Contracts_Contractors">
+            <End Role="Contractor" EntitySet="Contractors" />
+            <End Role="Contract" EntitySet="Contracts" />
+          </AssociationSet>
+          <EntitySet Name="Deliverables" EntityType="ContractsModel.Deliverable" />
+          <EntitySet Name="Deliverable_Status_Lu" EntityType="ContractsModel.Deliverable_Status_Lu" />
+          <EntitySet Name="Task_Status_LU" EntityType="ContractsModel.Task_Status_LU" />
+          <EntitySet Name="Tasks" EntityType="ContractsModel.Task" />
+          <AssociationSet Name="FK_Deliverable_Contracts" Association="ContractsModel.FK_Deliverable_Contracts">
+            <End Role="Contract" EntitySet="Contracts" />
+            <End Role="Deliverable" EntitySet="Deliverables" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Deliverable_Deliverable_Status_Lu" Association="ContractsModel.FK_Deliverable_Deliverable_Status_Lu">
+            <End Role="Deliverable_Status_Lu" EntitySet="Deliverable_Status_Lu" />
+            <End Role="Deliverable" EntitySet="Deliverables" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tasks_Task_Status_LU" Association="ContractsModel.FK_Tasks_Task_Status_LU">
+            <End Role="Task_Status_LU" EntitySet="Task_Status_LU" />
+            <End Role="Task" EntitySet="Tasks" />
+          </AssociationSet>
+          <EntitySet Name="Contractees" EntityType="ContractsModel.Contractee" />
+          <EntitySet Name="Contracts_Hours" EntityType="ContractsModel.Contracts_Hours" />
+          <EntitySet Name="Contracts_Rate" EntityType="ContractsModel.Contracts_Rate" />
+          <AssociationSet Name="FK_Contracts_Contractee" Association="ContractsModel.FK_Contracts_Contractee">
+            <End Role="Contractee" EntitySet="Contractees" />
+            <End Role="Contract" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contracts_Contracts_Rate" Association="ContractsModel.FK_Contracts_Contracts_Rate">
+            <End Role="Contracts_Rate" EntitySet="Contracts_Rate" />
+            <End Role="Contract" EntitySet="Contracts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contracts_Hours_Contracts" Association="ContractsModel.FK_Contracts_Hours_Contracts">
+            <End Role="Contract" EntitySet="Contracts" />
+            <End Role="Contracts_Hours" EntitySet="Contracts_Hours" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tasks_Contracts" Association="ContractsModel.FK_Tasks_Contracts">
+            <End Role="Contract" EntitySet="Contracts" />
+            <End Role="Task" EntitySet="Tasks" />
+          </AssociationSet>
+          <EntitySet Name="Contract_Rate_Freq_LU" EntityType="ContractsModel.Contract_Rate_Freq_LU" />
+          <AssociationSet Name="FK_Contracts_Contract_Rate_Freq_LU" Association="ContractsModel.FK_Contracts_Contract_Rate_Freq_LU">
+            <End Role="Contract_Rate_Freq_LU" EntitySet="Contract_Rate_Freq_LU" />
+            <End Role="Contract" EntitySet="Contracts" />
+          </AssociationSet>
+          <EntitySet Name="Invoice_Header" EntityType="ContractsModel.Invoice_Header" />
+          <AssociationSet Name="FK_Invoice_Header_Contracts" Association="ContractsModel.FK_Invoice_Header_Contracts">
+            <End Role="Contract" EntitySet="Contracts" />
+            <End Role="Invoice_Header" EntitySet="Invoice_Header" />
+          </AssociationSet>
+          <EntitySet Name="Report_Types" EntityType="ContractsModel.Report_Types" />
+          <EntitySet Name="Reports" EntityType="ContractsModel.Report" />
+          <AssociationSet Name="FK_Reports_Report_Types" Association="ContractsModel.FK_Reports_Report_Types">
+            <End Role="Report_Types" EntitySet="Report_Types" />
+            <End Role="Report" EntitySet="Reports" />
+          </AssociationSet>
+          <EntitySet Name="Expense_Type_LU" EntityType="ContractsModel.Expense_Type_LU" />
+          <EntitySet Name="Expenses" EntityType="ContractsModel.Expenses" />
+          <AssociationSet Name="FK_Expenses_Contractee" Association="ContractsModel.FK_Expenses_Contractee">
+            <End Role="Contractee" EntitySet="Contractees" />
+            <End Role="Expens" EntitySet="Expenses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Expenses_Expense_Type_LU" Association="ContractsModel.FK_Expenses_Expense_Type_LU">
+            <End Role="Expense_Type_LU" EntitySet="Expense_Type_LU" />
+            <End Role="Expens" EntitySet="Expenses" />
+          </AssociationSet>
+          <EntitySet Name="Incomes" EntityType="ContractsModel.Income" />
+          <AssociationSet Name="FK_Income_Contracts" Association="ContractsModel.FK_Income_Contracts">
+            <End Role="Contract" EntitySet="Contracts" />
+            <End Role="Income" EntitySet="Incomes" />
+          </AssociationSet>
+          <EntitySet Name="Versions" EntityType="ContractsModel.Version" />
+          <EntitySet Name="sysdiagrams" EntityType="ContractsModel.sysdiagram" />
+          <EntitySet Name="C__RefactorLog" EntityType="ContractsModel.C__RefactorLog" />
+          <EntitySet Name="Retirements" EntityType="ContractsModel.Retirement" />
+          <EntitySet Name="Retirement_Account_LU" EntityType="ContractsModel.Retirement_Account_LU" />
+          <AssociationSet Name="FK_Retirement_Retirement_Account_LU" Association="ContractsModel.FK_Retirement_Retirement_Account_LU">
+            <End Role="Retirement_Account_LU" EntitySet="Retirement_Account_LU" />
+            <End Role="Retirement" EntitySet="Retirements" />
+          </AssociationSet>
+          <EntitySet Name="Estimated_Tax_payments" EntityType="ContractsModel.Estimated_Tax_payments" />
+          <EntitySet Name="Quarter_LU" EntityType="ContractsModel.Quarter_LU" />
+          <AssociationSet Name="FK_Quarter_LU1" Association="ContractsModel.FK_Quarter_LU1">
+            <End Role="Quarter_LU" EntitySet="Quarter_LU" />
+            <End Role="Estimated_Tax_payments" EntitySet="Estimated_Tax_payments" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DFS_Hours">
+          <Key>
+            <PropertyRef Name="KY_DFS_Hours" />
+          </Key>
+          <Property Name="KY_DFS_Hours" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="int_Hours" Type="Double" Nullable="false" />
+          <Property Name="Desc_Hours" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="DateTime" Name="dt_Hours_Entered" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="Contract_Status_LU">
+          <Key>
+            <PropertyRef Name="KY_Status_Contract" />
+          </Key>
+          <Property Type="Int32" Name="KY_Status_Contract" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Desc_Contract_Status" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Contracts" Relationship="ContractsModel.FK_Contracts_Contract_Status_LU" FromRole="Contract_Status_LU" ToRole="Contract" />
+        </EntityType>
+        <EntityType Name="Contractor">
+          <Key>
+            <PropertyRef Name="KY_Contractor" />
+          </Key>
+          <Property Type="Int32" Name="KY_Contractor" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Primary_Contact_Contractor" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name_Contractor" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone_Contractor" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email_Contractor" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_Contractor" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Contracts" Relationship="ContractsModel.FK_Contracts_Contractors" FromRole="Contractor" ToRole="Contract" />
+          <Property Type="String" Name="Notes_Contractor" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="true" />
+          <Property Type="String" Name="Adress_Contractor_2" MaxLength="50" Nullable="true" Unicode="false" FixedLength="false" />
+          <Property Type="String" Name="City_Contractor" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="State_Contractor" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zip_Contractor" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Contract">
+          <Key>
+            <PropertyRef Name="KY_Contracts" />
+          </Key>
+          <Property Type="Int32" Name="KY_Contracts" Nullable="false" />
+          <Property Type="Int32" Name="KY_Contractor" Nullable="false" />
+          <Property Type="String" Name="Name_Contract" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Date_Contract_Begin" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="Date_Contract_End" Nullable="false" Precision="0" />
+          <Property Type="Int32" Name="Hours_Contract_Total" Nullable="false" />
+          <Property Type="Decimal" Name="Money_Contract_Total" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="KY_Status_Contract" Nullable="false" />
+          <NavigationProperty Name="Contract_Status_LU" Relationship="ContractsModel.FK_Contracts_Contract_Status_LU" FromRole="Contract" ToRole="Contract_Status_LU" />
+          <NavigationProperty Name="Contractor" Relationship="ContractsModel.FK_Contracts_Contractors" FromRole="Contract" ToRole="Contractor" />
+          <NavigationProperty Name="Deliverables" Relationship="ContractsModel.FK_Deliverable_Contracts" FromRole="Contract" ToRole="Deliverable" />
+          <Property Type="String" Name="Contract_Notes" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="KY_Rate" Nullable="false" />
+          <Property Type="Int32" Name="KY_Contractee" Nullable="false" />
+          <NavigationProperty Name="Contractee" Relationship="ContractsModel.FK_Contracts_Contractee" FromRole="Contract" ToRole="Contractee" />
+          <NavigationProperty Name="Contracts_Rate" Relationship="ContractsModel.FK_Contracts_Contracts_Rate" FromRole="Contract" ToRole="Contracts_Rate" />
+          <NavigationProperty Name="Contracts_Hours" Relationship="ContractsModel.FK_Contracts_Hours_Contracts" FromRole="Contract" ToRole="Contracts_Hours" />
+          <NavigationProperty Name="Tasks" Relationship="ContractsModel.FK_Tasks_Contracts" FromRole="Contract" ToRole="Task" />
+          <Property Type="Int32" Name="KY_Rate_Freq" Nullable="false" />
+          <NavigationProperty Name="Contract_Rate_Freq_LU" Relationship="ContractsModel.FK_Contracts_Contract_Rate_Freq_LU" FromRole="Contract" ToRole="Contract_Rate_Freq_LU" />
+          <NavigationProperty Name="Invoice_Header" Relationship="ContractsModel.FK_Invoice_Header_Contracts" FromRole="Contract" ToRole="Invoice_Header" />
+          <NavigationProperty Name="Incomes" Relationship="ContractsModel.FK_Income_Contracts" FromRole="Contract" ToRole="Income" />
+          <Property Type="String" Name="Desc_Contract_Services" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_Contracts_Contract_Status_LU">
+          <End Type="ContractsModel.Contract_Status_LU" Role="Contract_Status_LU" Multiplicity="1" />
+          <End Type="ContractsModel.Contract" Role="Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contract_Status_LU">
+              <PropertyRef Name="KY_Status_Contract" />
+            </Principal>
+            <Dependent Role="Contract">
+              <PropertyRef Name="KY_Status_Contract" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contracts_Contractors">
+          <End Type="ContractsModel.Contractor" Role="Contractor" Multiplicity="1" />
+          <End Type="ContractsModel.Contract" Role="Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contractor">
+              <PropertyRef Name="KY_Contractor" />
+            </Principal>
+            <Dependent Role="Contract">
+              <PropertyRef Name="KY_Contractor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Deliverable">
+          <Key>
+            <PropertyRef Name="KY_Deliverable" />
+          </Key>
+          <Property Type="Int32" Name="KY_Deliverable" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Contracts" Nullable="false" />
+          <Property Type="String" Name="Name_Deliverable" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Date_Deliverable_Due" Precision="0" />
+          <Property Type="Int32" Name="Total_Hours_Deliverable" />
+          <Property Type="String" Name="Notes_Deliverable" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="KY_Status_Deliverable" Nullable="false" />
+          <NavigationProperty Name="Contract" Relationship="ContractsModel.FK_Deliverable_Contracts" FromRole="Deliverable" ToRole="Contract" />
+          <NavigationProperty Name="Deliverable_Status_Lu" Relationship="ContractsModel.FK_Deliverable_Deliverable_Status_Lu" FromRole="Deliverable" ToRole="Deliverable_Status_Lu" />
+        </EntityType>
+        <EntityType Name="Deliverable_Status_Lu">
+          <Key>
+            <PropertyRef Name="KY_Status_Deliverable" />
+          </Key>
+          <Property Type="Int32" Name="KY_Status_Deliverable" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Desc_Deliverable" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Deliverables" Relationship="ContractsModel.FK_Deliverable_Deliverable_Status_Lu" FromRole="Deliverable_Status_Lu" ToRole="Deliverable" />
+        </EntityType>
+        <EntityType Name="Task_Status_LU">
+          <Key>
+            <PropertyRef Name="KY_Task_Status" />
+          </Key>
+          <Property Type="Int32" Name="KY_Task_Status" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Desc_Task_Status" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tasks" Relationship="ContractsModel.FK_Tasks_Task_Status_LU" FromRole="Task_Status_LU" ToRole="Task" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="KY_Tasks" />
+          </Key>
+          <Property Type="Int32" Name="KY_Tasks" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Task_Status" Nullable="false" />
+          <Property Type="String" Name="Desc_Tasks" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Date_Due_task" Precision="0" />
+          <Property Type="String" Name="Notes_Task" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Task_Status_LU" Relationship="ContractsModel.FK_Tasks_Task_Status_LU" FromRole="Task" ToRole="Task_Status_LU" />
+          <Property Type="Int32" Name="KY_Contracts" Nullable="false" />
+          <NavigationProperty Name="Contract" Relationship="ContractsModel.FK_Tasks_Contracts" FromRole="Task" ToRole="Contract" />
+        </EntityType>
+        <Association Name="FK_Deliverable_Contracts">
+          <End Type="ContractsModel.Contract" Role="Contract" Multiplicity="1" />
+          <End Type="ContractsModel.Deliverable" Role="Deliverable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contract">
+              <PropertyRef Name="KY_Contracts" />
+            </Principal>
+            <Dependent Role="Deliverable">
+              <PropertyRef Name="KY_Contracts" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Deliverable_Deliverable_Status_Lu">
+          <End Type="ContractsModel.Deliverable_Status_Lu" Role="Deliverable_Status_Lu" Multiplicity="1" />
+          <End Type="ContractsModel.Deliverable" Role="Deliverable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Deliverable_Status_Lu">
+              <PropertyRef Name="KY_Status_Deliverable" />
+            </Principal>
+            <Dependent Role="Deliverable">
+              <PropertyRef Name="KY_Status_Deliverable" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tasks_Task_Status_LU">
+          <End Type="ContractsModel.Task_Status_LU" Role="Task_Status_LU" Multiplicity="1" />
+          <End Type="ContractsModel.Task" Role="Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Task_Status_LU">
+              <PropertyRef Name="KY_Task_Status" />
+            </Principal>
+            <Dependent Role="Task">
+              <PropertyRef Name="KY_Task_Status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Contractee">
+          <Key>
+            <PropertyRef Name="KY_Contractee" />
+          </Key>
+          <Property Type="Int32" Name="KY_Contractee" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name_Contractee" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email_Contractee" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_Contractee_Street" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_Contractee_City" Nullable="false" MaxLength="90" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_Contractee_State" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Adress_Contractee_Zip" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Contracts" Relationship="ContractsModel.FK_Contracts_Contractee" FromRole="Contractee" ToRole="Contract" />
+          <NavigationProperty Name="Expenses" Relationship="ContractsModel.FK_Expenses_Contractee" FromRole="Contractee" ToRole="Expens" />
+        </EntityType>
+        <EntityType Name="Contracts_Hours">
+          <Key>
+            <PropertyRef Name="KY_Contracts_Hours" />
+          </Key>
+          <Property Type="Int32" Name="KY_Contracts_Hours" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Contracts" Nullable="false" />
+          <Property Type="DateTime" Name="Date_Hours_Workd" Nullable="false" Precision="0" />
+          <Property Type="Double" Name="Contracts_Hours1" Nullable="false" />
+          <Property Type="String" Name="Desc_Contracts_Hours" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Contract" Relationship="ContractsModel.FK_Contracts_Hours_Contracts" FromRole="Contracts_Hours" ToRole="Contract" />
+          <Property Type="DateTime" Name="Cat_Month" Precision="0" />
+        </EntityType>
+        <EntityType Name="Contracts_Rate">
+          <Key>
+            <PropertyRef Name="KY_Rate" />
+          </Key>
+          <Property Type="Int32" Name="KY_Rate" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="Amount_rate" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="Contracts" Relationship="ContractsModel.FK_Contracts_Contracts_Rate" FromRole="Contracts_Rate" ToRole="Contract" />
+        </EntityType>
+        <Association Name="FK_Contracts_Contractee">
+          <End Type="ContractsModel.Contractee" Role="Contractee" Multiplicity="1" />
+          <End Type="ContractsModel.Contract" Role="Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contractee">
+              <PropertyRef Name="KY_Contractee" />
+            </Principal>
+            <Dependent Role="Contract">
+              <PropertyRef Name="KY_Contractee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contracts_Contracts_Rate">
+          <End Type="ContractsModel.Contracts_Rate" Role="Contracts_Rate" Multiplicity="1" />
+          <End Type="ContractsModel.Contract" Role="Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contracts_Rate">
+              <PropertyRef Name="KY_Rate" />
+            </Principal>
+            <Dependent Role="Contract">
+              <PropertyRef Name="KY_Rate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contracts_Hours_Contracts">
+          <End Type="ContractsModel.Contract" Role="Contract" Multiplicity="1" />
+          <End Type="ContractsModel.Contracts_Hours" Role="Contracts_Hours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contract">
+              <PropertyRef Name="KY_Contracts" />
+            </Principal>
+            <Dependent Role="Contracts_Hours">
+              <PropertyRef Name="KY_Contracts" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tasks_Contracts">
+          <End Type="ContractsModel.Contract" Role="Contract" Multiplicity="1" />
+          <End Type="ContractsModel.Task" Role="Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contract">
+              <PropertyRef Name="KY_Contracts" />
+            </Principal>
+            <Dependent Role="Task">
+              <PropertyRef Name="KY_Contracts" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Contract_Rate_Freq_LU">
+          <Key>
+            <PropertyRef Name="KY_Rate_Freq" />
+          </Key>
+          <Property Type="Int32" Name="KY_Rate_Freq" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Desc_Rate_Freq" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Contracts" Relationship="ContractsModel.FK_Contracts_Contract_Rate_Freq_LU" FromRole="Contract_Rate_Freq_LU" ToRole="Contract" />
+        </EntityType>
+        <Association Name="FK_Contracts_Contract_Rate_Freq_LU">
+          <End Type="ContractsModel.Contract_Rate_Freq_LU" Role="Contract_Rate_Freq_LU" Multiplicity="1" />
+          <End Type="ContractsModel.Contract" Role="Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contract_Rate_Freq_LU">
+              <PropertyRef Name="KY_Rate_Freq" />
+            </Principal>
+            <Dependent Role="Contract">
+              <PropertyRef Name="KY_Rate_Freq" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Invoice_Header">
+          <Key>
+            <PropertyRef Name="KY_Invoice_Header" />
+          </Key>
+          <Property Type="Int32" Name="KY_Invoice_Header" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Contracts" Nullable="false" />
+          <Property Type="DateTime" Name="Date_Invoice_Created" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="Date_Invoice_Begin" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="Date_Invoice_End" Nullable="false" Precision="0" />
+          <Property Type="String" Name="Desc_Invoice" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Contract" Relationship="ContractsModel.FK_Invoice_Header_Contracts" FromRole="Invoice_Header" ToRole="Contract" />
+          <Property Type="Boolean" Name="Invoice_Complete" />
+        </EntityType>
+        <Association Name="FK_Invoice_Header_Contracts">
+          <End Type="ContractsModel.Contract" Role="Contract" Multiplicity="1" />
+          <End Type="ContractsModel.Invoice_Header" Role="Invoice_Header" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contract">
+              <PropertyRef Name="KY_Contracts" />
+            </Principal>
+            <Dependent Role="Invoice_Header">
+              <PropertyRef Name="KY_Contracts" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Report_Types">
+          <Key>
+            <PropertyRef Name="KY_Report_Type" />
+          </Key>
+          <Property Type="Int32" Name="KY_Report_Type" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DS_Report_Type" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Reports" Relationship="ContractsModel.FK_Reports_Report_Types" FromRole="Report_Types" ToRole="Report" />
+        </EntityType>
+        <EntityType Name="Report">
+          <Key>
+            <PropertyRef Name="KY_Report" />
+          </Key>
+          <Property Type="Int32" Name="KY_Report" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Report_Type" Nullable="false" />
+          <Property Type="String" Name="Name_report" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Path_Report" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email_Subject" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email_Body" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FileName_Report" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Report_Types" Relationship="ContractsModel.FK_Reports_Report_Types" FromRole="Report" ToRole="Report_Types" />
+        </EntityType>
+        <Association Name="FK_Reports_Report_Types">
+          <End Type="ContractsModel.Report_Types" Role="Report_Types" Multiplicity="1" />
+          <End Type="ContractsModel.Report" Role="Report" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Report_Types">
+              <PropertyRef Name="KY_Report_Type" />
+            </Principal>
+            <Dependent Role="Report">
+              <PropertyRef Name="KY_Report_Type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Expense_Type_LU">
+          <Key>
+            <PropertyRef Name="KY_Expense_Type" />
+          </Key>
+          <Property Type="Int32" Name="KY_Expense_Type" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Expense_Type" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Expenses" Relationship="ContractsModel.FK_Expenses_Expense_Type_LU" FromRole="Expense_Type_LU" ToRole="Expens" />
+          <Property Type="String" Name="IRS_Number" MaxLength="12" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Expenses">
+          <Key>
+            <PropertyRef Name="KY_Expense" />
+          </Key>
+          <Property Type="Int32" Name="KY_Expense" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Contractee" Nullable="false" />
+          <Property Type="Decimal" Name="Amount" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="Date_Expense" Nullable="false" Precision="0" />
+          <Property Type="String" Name="Description_Expense" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Img_Path_Expense" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="true" />
+          <Property Type="Int32" Name="KY_Expense_Type" Nullable="false" />
+          <Property Type="String" Name="Tax_Year_Expense" Nullable="true" MaxLength="4" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Contractee" Relationship="ContractsModel.FK_Expenses_Contractee" FromRole="Expens" ToRole="Contractee" />
+          <NavigationProperty Name="Expense_Type_LU" Relationship="ContractsModel.FK_Expenses_Expense_Type_LU" FromRole="Expens" ToRole="Expense_Type_LU" />
+        </EntityType>
+        <Association Name="FK_Expenses_Contractee">
+          <End Type="ContractsModel.Contractee" Role="Contractee" Multiplicity="1" />
+          <End Type="ContractsModel.Expenses" Role="Expens" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contractee">
+              <PropertyRef Name="KY_Contractee" />
+            </Principal>
+            <Dependent Role="Expens">
+              <PropertyRef Name="KY_Contractee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Expenses_Expense_Type_LU">
+          <End Type="ContractsModel.Expense_Type_LU" Role="Expense_Type_LU" Multiplicity="1" />
+          <End Type="ContractsModel.Expenses" Role="Expens" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expense_Type_LU">
+              <PropertyRef Name="KY_Expense_Type" />
+            </Principal>
+            <Dependent Role="Expens">
+              <PropertyRef Name="KY_Expense_Type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Income">
+          <Key>
+            <PropertyRef Name="KY_Income" />
+          </Key>
+          <Property Type="Int32" Name="KY_Income" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Contracts" Nullable="false" />
+          <Property Type="DateTime" Name="Date_Income" Nullable="false" Precision="0" />
+          <Property Type="Decimal" Name="Amount_Income" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="String" Name="Check_Number_Income" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Tax_Year_Income" />
+          <Property Type="String" Name="Img_Path_Check" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Contract" Relationship="ContractsModel.FK_Income_Contracts" FromRole="Income" ToRole="Contract" />
+          <Property Type="Int32" Name="KY_Invoice_Header" />
+          <Property Type="DateTime" Name="Cat_Month" Precision="0" />
+        </EntityType>
+        <Association Name="FK_Income_Contracts">
+          <End Type="ContractsModel.Contract" Role="Contract" Multiplicity="1" />
+          <End Type="ContractsModel.Income" Role="Income" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contract">
+              <PropertyRef Name="KY_Contracts" />
+            </Principal>
+            <Dependent Role="Income">
+              <PropertyRef Name="KY_Contracts" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Version">
+          <Key>
+            <PropertyRef Name="KY_Version" />
+          </Key>
+          <Property Type="Int32" Name="KY_Version" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Number_Version" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Date_Version" Nullable="false" Precision="0" />
+          <Property Type="String" Name="Desc_Version" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="C__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Retirement">
+          <Key>
+            <PropertyRef Name="KY_Retirement" />
+          </Key>
+          <Property Name="KY_Retirement" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date_Contribution" Type="DateTime" Precision="0" />
+          <Property Name="Amount_Contribution" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="KY_Retirement_Account" Type="Int32" />
+          <Property Name="Tax_Year" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Retirement_Account_LU" Relationship="ContractsModel.FK_Retirement_Retirement_Account_LU" FromRole="Retirement" ToRole="Retirement_Account_LU" />
+        </EntityType>
+        <EntityType Name="Retirement_Account_LU">
+          <Key>
+            <PropertyRef Name="KY_Retirement_Account" />
+          </Key>
+          <Property Name="KY_Retirement_Account" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Desc_Retirement_Account" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Retirements" Relationship="ContractsModel.FK_Retirement_Retirement_Account_LU" FromRole="Retirement_Account_LU" ToRole="Retirement" />
+        </EntityType>
+        <Association Name="FK_Retirement_Retirement_Account_LU">
+          <End Type="ContractsModel.Retirement_Account_LU" Role="Retirement_Account_LU" Multiplicity="0..1" />
+          <End Type="ContractsModel.Retirement" Role="Retirement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Retirement_Account_LU">
+              <PropertyRef Name="KY_Retirement_Account" />
+            </Principal>
+            <Dependent Role="Retirement">
+              <PropertyRef Name="KY_Retirement_Account" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Estimated_Tax_payments">
+          <Key>
+            <PropertyRef Name="KY_Estimated_Taxes" />
+          </Key>
+          <Property Name="KY_Estimated_Taxes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date_Est_Tax_Paid" Type="DateTime" Precision="0" />
+          <Property Name="Amount_Estimated_Tax" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="KY_Quarter_LU" Type="Int32" />
+          <Property Name="Tax_Year" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Quarter_LU1" Relationship="ContractsModel.FK_Quarter_LU1" FromRole="Estimated_Tax_payments" ToRole="Quarter_LU" />
+          <Property Name="Img_Path_Est_Tax" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Quarter_LU">
+          <Key>
+            <PropertyRef Name="KY_Quarter_LU" />
+          </Key>
+          <Property Name="KY_Quarter_LU" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Desc_quarter" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Estimated_Tax_payments1" Relationship="ContractsModel.FK_Quarter_LU1" FromRole="Quarter_LU" ToRole="Estimated_Tax_payments" />
+        </EntityType>
+        <Association Name="FK_Quarter_LU1">
+          <End Type="ContractsModel.Quarter_LU" Role="Quarter_LU" Multiplicity="0..1" />
+          <End Type="ContractsModel.Estimated_Tax_payments" Role="Estimated_Tax_payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Quarter_LU">
+              <PropertyRef Name="KY_Quarter_LU" />
+            </Principal>
+            <Dependent Role="Estimated_Tax_payments">
+              <PropertyRef Name="KY_Quarter_LU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ContractsModelStoreContainer" CdmEntityContainer="ContractsEntities">
+          <EntitySetMapping Name="DFS_Hours">
+            <EntityTypeMapping TypeName="ContractsModel.DFS_Hours">
+              <MappingFragment StoreEntitySet="DFS_Hours">
+                <ScalarProperty Name="dt_Hours_Entered" ColumnName="dt_Hours_Entered" />
+                <ScalarProperty Name="KY_DFS_Hours" ColumnName="KY_DFS_Hours" />
+                <ScalarProperty Name="int_Hours" ColumnName="int_Hours" />
+                <ScalarProperty Name="Desc_Hours" ColumnName="Desc_Hours" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contract_Status_LU">
+            <EntityTypeMapping TypeName="ContractsModel.Contract_Status_LU">
+              <MappingFragment StoreEntitySet="Contract_Status_LU">
+                <ScalarProperty Name="Desc_Contract_Status" ColumnName="Desc_Contract_Status" />
+                <ScalarProperty Name="KY_Status_Contract" ColumnName="KY_Status_Contract" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contractors">
+            <EntityTypeMapping TypeName="ContractsModel.Contractor">
+              <MappingFragment StoreEntitySet="Contractors">
+                <ScalarProperty Name="Zip_Contractor" ColumnName="Zip_Contractor" />
+                <ScalarProperty Name="State_Contractor" ColumnName="State_Contractor" />
+                <ScalarProperty Name="City_Contractor" ColumnName="City_Contractor" />
+                <ScalarProperty Name="Adress_Contractor_2" ColumnName="Adress_Contractor_2" />
+                <ScalarProperty Name="Notes_Contractor" ColumnName="Notes_Contractor" />
+                <ScalarProperty Name="Address_Contractor" ColumnName="Address_Contractor" />
+                <ScalarProperty Name="Email_Contractor" ColumnName="Email_Contractor" />
+                <ScalarProperty Name="Phone_Contractor" ColumnName="Phone_Contractor" />
+                <ScalarProperty Name="Name_Contractor" ColumnName="Name_Contractor" />
+                <ScalarProperty Name="Primary_Contact_Contractor" ColumnName="Primary_Contact_Contractor" />
+                <ScalarProperty Name="KY_Contractor" ColumnName="KY_Contractor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contracts">
+            <EntityTypeMapping TypeName="ContractsModel.Contract">
+              <MappingFragment StoreEntitySet="Contracts">
+                <ScalarProperty Name="Desc_Contract_Services" ColumnName="Desc_Contract_Services" />
+                <ScalarProperty Name="KY_Rate_Freq" ColumnName="KY_Rate_Freq" />
+                <ScalarProperty Name="KY_Contractee" ColumnName="KY_Contractee" />
+                <ScalarProperty Name="KY_Rate" ColumnName="KY_Rate" />
+                <ScalarProperty Name="Contract_Notes" ColumnName="Contract_Notes" />
+                <ScalarProperty Name="KY_Status_Contract" ColumnName="KY_Status_Contract" />
+                <ScalarProperty Name="Money_Contract_Total" ColumnName="Money_Contract_Total" />
+                <ScalarProperty Name="Hours_Contract_Total" ColumnName="Hours_Contract_Total" />
+                <ScalarProperty Name="Date_Contract_End" ColumnName="Date_Contract_End" />
+                <ScalarProperty Name="Date_Contract_Begin" ColumnName="Date_Contract_Begin" />
+                <ScalarProperty Name="Name_Contract" ColumnName="Name_Contract" />
+                <ScalarProperty Name="KY_Contractor" ColumnName="KY_Contractor" />
+                <ScalarProperty Name="KY_Contracts" ColumnName="KY_Contracts" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Deliverables">
+            <EntityTypeMapping TypeName="ContractsModel.Deliverable">
+              <MappingFragment StoreEntitySet="Deliverable">
+                <ScalarProperty Name="KY_Status_Deliverable" ColumnName="KY_Status_Deliverable" />
+                <ScalarProperty Name="Notes_Deliverable" ColumnName="Notes_Deliverable" />
+                <ScalarProperty Name="Total_Hours_Deliverable" ColumnName="Total_Hours_Deliverable" />
+                <ScalarProperty Name="Date_Deliverable_Due" ColumnName="Date_Deliverable_Due" />
+                <ScalarProperty Name="Name_Deliverable" ColumnName="Name_Deliverable" />
+                <ScalarProperty Name="KY_Contracts" ColumnName="KY_Contracts" />
+                <ScalarProperty Name="KY_Deliverable" ColumnName="KY_Deliverable" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Deliverable_Status_Lu">
+            <EntityTypeMapping TypeName="ContractsModel.Deliverable_Status_Lu">
+              <MappingFragment StoreEntitySet="Deliverable_Status_Lu">
+                <ScalarProperty Name="Desc_Deliverable" ColumnName="Desc_Deliverable" />
+                <ScalarProperty Name="KY_Status_Deliverable" ColumnName="KY_Status_Deliverable" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Task_Status_LU">
+            <EntityTypeMapping TypeName="ContractsModel.Task_Status_LU">
+              <MappingFragment StoreEntitySet="Task_Status_LU">
+                <ScalarProperty Name="Desc_Task_Status" ColumnName="Desc_Task_Status" />
+                <ScalarProperty Name="KY_Task_Status" ColumnName="KY_Task_Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tasks">
+            <EntityTypeMapping TypeName="ContractsModel.Task">
+              <MappingFragment StoreEntitySet="Tasks">
+                <ScalarProperty Name="KY_Contracts" ColumnName="KY_Contracts" />
+                <ScalarProperty Name="Notes_Task" ColumnName="Notes_Task" />
+                <ScalarProperty Name="Date_Due_task" ColumnName="Date_Due_task" />
+                <ScalarProperty Name="Desc_Tasks" ColumnName="Desc_Tasks" />
+                <ScalarProperty Name="KY_Task_Status" ColumnName="KY_Task_Status" />
+                <ScalarProperty Name="KY_Tasks" ColumnName="KY_Tasks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contractees">
+            <EntityTypeMapping TypeName="ContractsModel.Contractee">
+              <MappingFragment StoreEntitySet="Contractee">
+                <ScalarProperty Name="Adress_Contractee_Zip" ColumnName="Adress_Contractee_Zip" />
+                <ScalarProperty Name="Address_Contractee_State" ColumnName="Address_Contractee_State" />
+                <ScalarProperty Name="Address_Contractee_City" ColumnName="Address_Contractee_City" />
+                <ScalarProperty Name="Address_Contractee_Street" ColumnName="Address_Contractee_Street" />
+                <ScalarProperty Name="Email_Contractee" ColumnName="Email_Contractee" />
+                <ScalarProperty Name="Name_Contractee" ColumnName="Name_Contractee" />
+                <ScalarProperty Name="KY_Contractee" ColumnName="KY_Contractee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contracts_Hours">
+            <EntityTypeMapping TypeName="ContractsModel.Contracts_Hours">
+              <MappingFragment StoreEntitySet="Contracts_Hours">
+                <ScalarProperty Name="Cat_Month" ColumnName="Cat_Month" />
+                <ScalarProperty Name="Desc_Contracts_Hours" ColumnName="Desc_Contracts_Hours" />
+                <ScalarProperty Name="Contracts_Hours1" ColumnName="Contracts_Hours" />
+                <ScalarProperty Name="Date_Hours_Workd" ColumnName="Date_Hours_Workd" />
+                <ScalarProperty Name="KY_Contracts" ColumnName="KY_Contracts" />
+                <ScalarProperty Name="KY_Contracts_Hours" ColumnName="KY_Contracts_Hours" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contracts_Rate">
+            <EntityTypeMapping TypeName="ContractsModel.Contracts_Rate">
+              <MappingFragment StoreEntitySet="Contracts_Rate">
+                <ScalarProperty Name="Amount_rate" ColumnName="Amount_rate" />
+                <ScalarProperty Name="KY_Rate" ColumnName="KY_Rate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contract_Rate_Freq_LU">
+            <EntityTypeMapping TypeName="ContractsModel.Contract_Rate_Freq_LU">
+              <MappingFragment StoreEntitySet="Contract_Rate_Freq_LU">
+                <ScalarProperty Name="Desc_Rate_Freq" ColumnName="Desc_Rate_Freq" />
+                <ScalarProperty Name="KY_Rate_Freq" ColumnName="KY_Rate_Freq" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Invoice_Header">
+            <EntityTypeMapping TypeName="ContractsModel.Invoice_Header">
+              <MappingFragment StoreEntitySet="Invoice_Header">
+                <ScalarProperty Name="Invoice_Complete" ColumnName="Invoice_Complete" />
+                <ScalarProperty Name="Desc_Invoice" ColumnName="Desc_Invoice" />
+                <ScalarProperty Name="Date_Invoice_End" ColumnName="Date_Invoice_End" />
+                <ScalarProperty Name="Date_Invoice_Begin" ColumnName="Date_Invoice_Begin" />
+                <ScalarProperty Name="Date_Invoice_Created" ColumnName="Date_Invoice_Created" />
+                <ScalarProperty Name="KY_Contracts" ColumnName="KY_Contracts" />
+                <ScalarProperty Name="KY_Invoice_Header" ColumnName="KY_Invoice_Header" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Report_Types">
+            <EntityTypeMapping TypeName="ContractsModel.Report_Types">
+              <MappingFragment StoreEntitySet="Report_Types">
+                <ScalarProperty Name="DS_Report_Type" ColumnName="DS_Report_Type" />
+                <ScalarProperty Name="KY_Report_Type" ColumnName="KY_Report_Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reports">
+            <EntityTypeMapping TypeName="ContractsModel.Report">
+              <MappingFragment StoreEntitySet="Reports">
+                <ScalarProperty Name="FileName_Report" ColumnName="FileName_Report" />
+                <ScalarProperty Name="Email_Body" ColumnName="Email_Body" />
+                <ScalarProperty Name="Email_Subject" ColumnName="Email_Subject" />
+                <ScalarProperty Name="Path_Report" ColumnName="Path_Report" />
+                <ScalarProperty Name="Name_report" ColumnName="Name_report" />
+                <ScalarProperty Name="KY_Report_Type" ColumnName="KY_Report_Type" />
+                <ScalarProperty Name="KY_Report" ColumnName="KY_Report" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Expense_Type_LU">
+            <EntityTypeMapping TypeName="ContractsModel.Expense_Type_LU">
+              <MappingFragment StoreEntitySet="Expense_Type_LU">
+                <ScalarProperty Name="IRS_Number" ColumnName="IRS_Number" />
+                <ScalarProperty Name="Expense_Type" ColumnName="Expense_Type" />
+                <ScalarProperty Name="KY_Expense_Type" ColumnName="KY_Expense_Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Expenses">
+            <EntityTypeMapping TypeName="ContractsModel.Expenses">
+              <MappingFragment StoreEntitySet="Expenses">
+                <ScalarProperty Name="Tax_Year_Expense" ColumnName="Tax_Year_Expense" />
+                <ScalarProperty Name="KY_Expense_Type" ColumnName="KY_Expense_Type" />
+                <ScalarProperty Name="Img_Path_Expense" ColumnName="Img_Path_Expense" />
+                <ScalarProperty Name="Description_Expense" ColumnName="Description_Expense" />
+                <ScalarProperty Name="Date_Expense" ColumnName="Date_Expense" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="KY_Contractee" ColumnName="KY_Contractee" />
+                <ScalarProperty Name="KY_Expense" ColumnName="KY_Expense" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Incomes">
+            <EntityTypeMapping TypeName="ContractsModel.Income">
+              <MappingFragment StoreEntitySet="Income">
+                <ScalarProperty Name="Cat_Month" ColumnName="Cat_Month" />
+                <ScalarProperty Name="KY_Invoice_Header" ColumnName="KY_Invoice_Header" />
+                <ScalarProperty Name="Img_Path_Check" ColumnName="Img_Path_Check" />
+                <ScalarProperty Name="Tax_Year_Income" ColumnName="Tax_Year_Income" />
+                <ScalarProperty Name="Check_Number_Income" ColumnName="Check_Number_Income" />
+                <ScalarProperty Name="Amount_Income" ColumnName="Amount_Income" />
+                <ScalarProperty Name="Date_Income" ColumnName="Date_Income" />
+                <ScalarProperty Name="KY_Contracts" ColumnName="KY_Contracts" />
+                <ScalarProperty Name="KY_Income" ColumnName="KY_Income" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Versions">
+            <EntityTypeMapping TypeName="ContractsModel.Version">
+              <MappingFragment StoreEntitySet="Version">
+                <ScalarProperty Name="Desc_Version" ColumnName="Desc_Version" />
+                <ScalarProperty Name="Date_Version" ColumnName="Date_Version" />
+                <ScalarProperty Name="Number_Version" ColumnName="Number_Version" />
+                <ScalarProperty Name="KY_Version" ColumnName="KY_Version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="ContractsModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C__RefactorLog">
+            <EntityTypeMapping TypeName="ContractsModel.C__RefactorLog">
+              <MappingFragment StoreEntitySet="__RefactorLog">
+                <ScalarProperty Name="OperationKey" ColumnName="OperationKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Retirements">
+            <EntityTypeMapping TypeName="ContractsModel.Retirement">
+              <MappingFragment StoreEntitySet="Retirement">
+                <ScalarProperty Name="Tax_Year" ColumnName="Tax_Year" />
+                <ScalarProperty Name="KY_Retirement_Account" ColumnName="KY_Retirement_Account" />
+                <ScalarProperty Name="Amount_Contribution" ColumnName="Amount_Contribution" />
+                <ScalarProperty Name="Date_Contribution" ColumnName="Date_Contribution" />
+                <ScalarProperty Name="KY_Retirement" ColumnName="KY_Retirement" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Retirement_Account_LU">
+            <EntityTypeMapping TypeName="ContractsModel.Retirement_Account_LU">
+              <MappingFragment StoreEntitySet="Retirement_Account_LU">
+                <ScalarProperty Name="Desc_Retirement_Account" ColumnName="Desc_Retirement_Account" />
+                <ScalarProperty Name="KY_Retirement_Account" ColumnName="KY_Retirement_Account" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Estimated_Tax_payments">
+            <EntityTypeMapping TypeName="ContractsModel.Estimated_Tax_payments">
+              <MappingFragment StoreEntitySet="Estimated_Tax_payments">
+                <ScalarProperty Name="Img_Path_Est_Tax" ColumnName="Img_Path_Est_Tax" />
+                <ScalarProperty Name="Tax_Year" ColumnName="Tax_Year" />
+                <ScalarProperty Name="KY_Quarter_LU" ColumnName="KY_Quarter_LU" />
+                <ScalarProperty Name="Amount_Estimated_Tax" ColumnName="Amount_Estimated_Tax" />
+                <ScalarProperty Name="Date_Est_Tax_Paid" ColumnName="Date_Est_Tax_Paid" />
+                <ScalarProperty Name="KY_Estimated_Taxes" ColumnName="KY_Estimated_Taxes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Quarter_LU">
+            <EntityTypeMapping TypeName="ContractsModel.Quarter_LU">
+              <MappingFragment StoreEntitySet="Quarter_LU">
+                <ScalarProperty Name="Desc_quarter" ColumnName="Desc_quarter" />
+                <ScalarProperty Name="KY_Quarter_LU" ColumnName="KY_Quarter_LU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="ContractsModel.DFS_Hours" Width="1.5" PointX="0.5" PointY="0.5" Height="1.497030436197917" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContractsModel.Contract_Status_LU" Width="1.875" PointX="8.125" PointY="0.75" Height="1.3462939453124996" />
+        <EntityTypeShape EntityType="ContractsModel.Contractor" Width="2" PointX="2.625" PointY="0.5" Height="3.3263964843749996" />
+        <EntityTypeShape EntityType="ContractsModel.Contract" Width="1.875" PointX="4.75" PointY="0.5" Height="5.2494108072916656" />
+        <AssociationConnector Association="ContractsModel.FK_Contracts_Contract_Status_LU" >
+          <ConnectorPoint PointX="8.125" PointY="1.5478417968750002" />
+          <ConnectorPoint PointX="6.625" PointY="1.5478417968750002" />
+        </AssociationConnector>
+        <AssociationConnector Association="ContractsModel.FK_Contracts_Contractors" >
+          <ConnectorPoint PointX="4.625" PointY="2.1631982421875" />
+          <ConnectorPoint PointX="4.75" PointY="2.1631982421875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ContractsModel.Deliverable" Width="1.5" PointX="2.625" PointY="3" Height="2.4014493815104174" />
+        <EntityTypeShape EntityType="ContractsModel.Deliverable_Status_Lu" Width="1.5" PointX="0.75" PointY="3.125" Height="1.3462939453124996" />
+        <EntityTypeShape EntityType="ContractsModel.Task_Status_LU" Width="1.5" PointX="9.75" PointY="2.75" Height="1.3462939453124996" />
+        <EntityTypeShape EntityType="ContractsModel.Task" Width="1.5" PointX="7.25" PointY="2.625" Height="2.0999763997395826" />
+        <AssociationConnector Association="ContractsModel.FK_Deliverable_Contracts" >
+          <ConnectorPoint PointX="4.75" PointY="4.6631982421875" />
+          <ConnectorPoint PointX="4.125" PointY="4.6631982421875" />
+        </AssociationConnector>
+        <AssociationConnector Association="ContractsModel.FK_Deliverable_Deliverable_Status_Lu" >
+          <ConnectorPoint PointX="2.25" PointY="3.922841796875" />
+          <ConnectorPoint PointX="2.4145466666666664" PointY="3.9228417968749993" />
+          <ConnectorPoint PointX="2.5812133333333334" PointY="3.922841796875" />
+          <ConnectorPoint PointX="2.625" PointY="3.922841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="ContractsModel.FK_Tasks_Task_Status_LU" >
+          <ConnectorPoint PointX="9.75" PointY="3.42314697265625" />
+          <ConnectorPoint PointX="8.75" PointY="3.42314697265625" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ContractsModel.Contractee" Width="1.5" PointX="2.875" PointY="5.5" Height="2.0999763997395817" />
+        <EntityTypeShape EntityType="ContractsModel.Contracts_Hours" Width="1.5" PointX="6.875" PointY="5" Height="1.9492399088541665" />
+        <EntityTypeShape EntityType="ContractsModel.Contracts_Rate" Width="1.5" PointX="0.875" PointY="5" Height="1.4970304361979165" />
+        <AssociationConnector Association="ContractsModel.FK_Contracts_Contractee" >
+          <ConnectorPoint PointX="4.375" PointY="7.11469921875" />
+          <ConnectorPoint PointX="5.1826795104166674" PointY="7.1146992187499993" />
+          <ConnectorPoint PointX="5.3493461770833335" PointY="7.11469921875" />
+          <ConnectorPoint PointX="5.3816666666666668" PointY="7.1146992187499993" />
+          <ConnectorPoint PointX="5.5483333333333329" PointY="7.11469921875" />
+          <ConnectorPoint PointX="5.860936875" PointY="7.11469921875" />
+          <ConnectorPoint PointX="5.860936875" PointY="5.7494108072916656" />
+        </AssociationConnector>
+        <AssociationConnector Association="ContractsModel.FK_Contracts_Contracts_Rate" >
+          <ConnectorPoint PointX="2.375" PointY="5.797841796875" />
+          <ConnectorPoint PointX="2.49788" PointY="5.797841796875" />
+          <ConnectorPoint PointX="2.49788" PointY="0.37711999999999996" />
+          <ConnectorPoint PointX="5.6875" PointY="0.37711999999999996" />
+          <ConnectorPoint PointX="5.6875" PointY="0.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="ContractsModel.FK_Contracts_Hours_Contracts" >
+          <ConnectorPoint PointX="6.625" PointY="5.3747054036458328" />
+          <ConnectorPoint PointX="6.875" PointY="5.3747054036458328" />
+        </AssociationConnector>
+        <AssociationConnector Association="ContractsModel.FK_Tasks_Contracts" >
+          <ConnectorPoint PointX="6.625" PointY="3.78125" />
+          <ConnectorPoint PointX="7.25" PointY="3.78125" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ContractsModel.Contract_Rate_Freq_LU" Width="2" PointX="0.5" PointY="6.75" Height="1.3462939453125031" />
+        <AssociationConnector Association="ContractsModel.FK_Contracts_Contract_Rate_Freq_LU" >
+          <ConnectorPoint PointX="0.5" PointY="7.547841796875" />
+          <ConnectorPoint PointX="0.25999999999999995" PointY="7.547841796875" />
+          <ConnectorPoint PointX="0.25999999999999995" PointY="8.58568359375" />
+          <ConnectorPoint PointX="3.7916666666666665" PointY="8.58568359375" />
+          <ConnectorPoint PointX="3.9583333333333335" PointY="8.58568359375" />
+          <ConnectorPoint PointX="5.1826795104166674" PointY="8.58568359375" />
+          <ConnectorPoint PointX="5.3493461770833335" PointY="8.58568359375" />
+          <ConnectorPoint PointX="5.465" PointY="8.58568359375" />
+          <ConnectorPoint PointX="5.465" PointY="6.84" />
+          <ConnectorPoint PointX="5.4070256875000009" PointY="6.84" />
+          <ConnectorPoint PointX="5.4070256875000009" PointY="5.7494108072916656" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ContractsModel.Invoice_Header" Width="1.5" PointX="5.625" PointY="7" Height="2.0999763997395817" />
+        <AssociationConnector Association="ContractsModel.FK_Invoice_Header_Contracts" >
+          <ConnectorPoint PointX="6.3054684375" PointY="5.7494108072916656" />
+          <ConnectorPoint PointX="6.3054684375" PointY="7" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ContractsModel.Report_Types" Width="1.5" PointX="8.5" PointY="4.875" Height="1.3462939453125031" />
+        <EntityTypeShape EntityType="ContractsModel.Report" Width="1.5" PointX="10.25" PointY="4.875" Height="2.0999763997395888" />
+        <AssociationConnector Association="ContractsModel.FK_Reports_Report_Types" >
+          <ConnectorPoint PointX="10" PointY="5.5481469726562516" />
+          <ConnectorPoint PointX="10.25" PointY="5.5481469726562516" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ContractsModel.Expense_Type_LU" Width="1.5" PointX="1" PointY="9.5" Height="1.4970304361979157" />
+        <EntityTypeShape EntityType="ContractsModel.Expenses" Width="1.5" PointX="3.375" PointY="9" Height="2.4014493815104174" />
+        <AssociationConnector Association="ContractsModel.FK_Expenses_Contractee" >
+          <ConnectorPoint PointX="3.875" PointY="8.2494921875" />
+          <ConnectorPoint PointX="3.875" PointY="9" />
+        </AssociationConnector>
+        <AssociationConnector Association="ContractsModel.FK_Expenses_Expense_Type_LU" >
+          <ConnectorPoint PointX="2.5" PointY="10.248515218098959" />
+          <ConnectorPoint PointX="3.375" PointY="10.248515218098959" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ContractsModel.Income" Width="1.5" PointX="5.25" PointY="9.5" Height="2.0999763997395817" />
+        <AssociationConnector Association="ContractsModel.FK_Income_Contracts" >
+          <ConnectorPoint PointX="5.2660128437500004" PointY="5.7494108072916656" />
+          <ConnectorPoint PointX="5.2660128437500004" PointY="9.5" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ContractsModel.Version" Width="1.5" PointX="7.5" PointY="7.625" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="ContractsModel.sysdiagram" Width="1.5" PointX="7.375" PointY="10.75" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="ContractsModel.C__RefactorLog" Width="1.5" PointX="9.875" PointY="0.75" />
+        <EntityTypeShape EntityType="ContractsModel.Retirement" Width="2.25" PointX="10" PointY="8" />
+        <EntityTypeShape EntityType="ContractsModel.Retirement_Account_LU" Width="2.5" PointX="12.875" PointY="9" />
+        <AssociationConnector Association="ContractsModel.FK_Retirement_Retirement_Account_LU" />
+        <EntityTypeShape EntityType="ContractsModel.Estimated_Tax_payments" Width="1.5" PointX="9.625" PointY="10.625" />
+        <EntityTypeShape EntityType="ContractsModel.Quarter_LU" Width="1.5" PointX="11.625" PointY="11.5" />
+        <AssociationConnector Association="ContractsModel.FK_Quarter_LU1" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
