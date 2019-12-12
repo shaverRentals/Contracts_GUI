@@ -5,7 +5,7 @@ Public Class frm_Splash
     Public context As New Contracts.ContractsEntities
     Private Sub frm_Splash_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         '=======================================================================================================
-        'Creates animated banner specific to logged in user
+        'Creates animated banner specific to logged in user.
         '========================================================================================================
         Try
             Me.lbl_login.Text = "Hello: " & System.Environment.UserName & " Welcome To:"
