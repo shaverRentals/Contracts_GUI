@@ -6,32 +6,32 @@
       <Value Profile="(Default)">Contracts</Value>
     </Setting>
     <Setting Name="strServerName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">DESKTOP-7B44QVN</Value>
+      <Value Profile="(Default)">DESKTOP-E2S11US</Value>
+    </Setting>
+    <Setting Name="strBU_Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">G:\</Value>
     </Setting>
     <Setting Name="Coll_DB_Name" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+&lt;ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;string&gt;Contracts&lt;/string&gt;
   &lt;string&gt;Contracts_Dev&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
     <Setting Name="Coll_Server_Name" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+&lt;ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;string&gt;.\SQLEXPRESS&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
     <Setting Name="Coll_BU_Folder" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+&lt;ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;string&gt;A&lt;/string&gt;
   &lt;string&gt;B&lt;/string&gt;
   &lt;string&gt;C&lt;/string&gt;
   &lt;string&gt;D&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
-    </Setting>
-    <Setting Name="strBU_Folder" Type="System.String" Scope="User">
-      <Value Profile="(Default)">G:\</Value>
     </Setting>
   </Settings>
 </SettingsFile>
