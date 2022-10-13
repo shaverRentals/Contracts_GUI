@@ -17,8 +17,7 @@ Imports System.Linq
 Imports System.Runtime.Serialization
 Imports System.Xml.Serialization
 
-
-<Assembly: EdmSchemaAttribute("d719693e-e510-4e5e-b1ba-ee4da0bace34")>
+<Assembly: EdmSchemaAttribute("70468f3f-80fb-4ef3-8a36-8ce0453be029")>
 #Region "EDM Relationship Metadata"
 <Assembly: EdmRelationshipAttribute("ContractsModel", "FK_Contracts_Contract_Status_LU", "Contract_Status_LU", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(Contract_Status_LU), "Contract", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(Contract), True)>
 <Assembly: EdmRelationshipAttribute("ContractsModel", "FK_Contracts_Contractors", "Contractor", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(Contractor), "Contract", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(Contract), True)>
@@ -647,7 +646,7 @@ Public Partial Class C__RefactorLog
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -662,7 +661,7 @@ Public Partial Class C__RefactorLog
             If (_OperationKey <> Value) Then
                 OnOperationKeyChanging(value)
                 ReportPropertyChanging("OperationKey")
-                _OperationKey = StructuralObject.SetValidValue(value)
+                _OperationKey = StructuralObject.SetValidValue(value, "OperationKey")
                 ReportPropertyChanged("OperationKey")
                 OnOperationKeyChanged()
             End If
@@ -722,7 +721,7 @@ Public Partial Class Contract
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -737,7 +736,7 @@ Public Partial Class Contract
             If (_KY_Contracts <> Value) Then
                 OnKY_ContractsChanging(value)
                 ReportPropertyChanging("KY_Contracts")
-                _KY_Contracts = StructuralObject.SetValidValue(value)
+                _KY_Contracts = StructuralObject.SetValidValue(value, "KY_Contracts")
                 ReportPropertyChanged("KY_Contracts")
                 OnKY_ContractsChanged()
             End If
@@ -763,7 +762,7 @@ Public Partial Class Contract
         Set
             OnKY_ContractorChanging(value)
             ReportPropertyChanging("KY_Contractor")
-            _KY_Contractor = StructuralObject.SetValidValue(value)
+            _KY_Contractor = StructuralObject.SetValidValue(value, "KY_Contractor")
             ReportPropertyChanged("KY_Contractor")
             OnKY_ContractorChanged()
         End Set
@@ -788,7 +787,7 @@ Public Partial Class Contract
         Set
             OnName_ContractChanging(value)
             ReportPropertyChanging("Name_Contract")
-            _Name_Contract = StructuralObject.SetValidValue(value, false)
+            _Name_Contract = StructuralObject.SetValidValue(value, false, "Name_Contract")
             ReportPropertyChanged("Name_Contract")
             OnName_ContractChanged()
         End Set
@@ -813,7 +812,7 @@ Public Partial Class Contract
         Set
             OnDate_Contract_BeginChanging(value)
             ReportPropertyChanging("Date_Contract_Begin")
-            _Date_Contract_Begin = StructuralObject.SetValidValue(value)
+            _Date_Contract_Begin = StructuralObject.SetValidValue(value, "Date_Contract_Begin")
             ReportPropertyChanged("Date_Contract_Begin")
             OnDate_Contract_BeginChanged()
         End Set
@@ -838,7 +837,7 @@ Public Partial Class Contract
         Set
             OnDate_Contract_EndChanging(value)
             ReportPropertyChanging("Date_Contract_End")
-            _Date_Contract_End = StructuralObject.SetValidValue(value)
+            _Date_Contract_End = StructuralObject.SetValidValue(value, "Date_Contract_End")
             ReportPropertyChanged("Date_Contract_End")
             OnDate_Contract_EndChanged()
         End Set
@@ -863,7 +862,7 @@ Public Partial Class Contract
         Set
             OnHours_Contract_TotalChanging(value)
             ReportPropertyChanging("Hours_Contract_Total")
-            _Hours_Contract_Total = StructuralObject.SetValidValue(value)
+            _Hours_Contract_Total = StructuralObject.SetValidValue(value, "Hours_Contract_Total")
             ReportPropertyChanged("Hours_Contract_Total")
             OnHours_Contract_TotalChanged()
         End Set
@@ -888,7 +887,7 @@ Public Partial Class Contract
         Set
             OnMoney_Contract_TotalChanging(value)
             ReportPropertyChanging("Money_Contract_Total")
-            _Money_Contract_Total = StructuralObject.SetValidValue(value)
+            _Money_Contract_Total = StructuralObject.SetValidValue(value, "Money_Contract_Total")
             ReportPropertyChanged("Money_Contract_Total")
             OnMoney_Contract_TotalChanged()
         End Set
@@ -913,7 +912,7 @@ Public Partial Class Contract
         Set
             OnKY_Status_ContractChanging(value)
             ReportPropertyChanging("KY_Status_Contract")
-            _KY_Status_Contract = StructuralObject.SetValidValue(value)
+            _KY_Status_Contract = StructuralObject.SetValidValue(value, "KY_Status_Contract")
             ReportPropertyChanged("KY_Status_Contract")
             OnKY_Status_ContractChanged()
         End Set
@@ -938,7 +937,7 @@ Public Partial Class Contract
         Set
             OnContract_NotesChanging(value)
             ReportPropertyChanging("Contract_Notes")
-            _Contract_Notes = StructuralObject.SetValidValue(value, true)
+            _Contract_Notes = StructuralObject.SetValidValue(value, true, "Contract_Notes")
             ReportPropertyChanged("Contract_Notes")
             OnContract_NotesChanged()
         End Set
@@ -963,7 +962,7 @@ Public Partial Class Contract
         Set
             OnKY_RateChanging(value)
             ReportPropertyChanging("KY_Rate")
-            _KY_Rate = StructuralObject.SetValidValue(value)
+            _KY_Rate = StructuralObject.SetValidValue(value, "KY_Rate")
             ReportPropertyChanged("KY_Rate")
             OnKY_RateChanged()
         End Set
@@ -988,7 +987,7 @@ Public Partial Class Contract
         Set
             OnKY_ContracteeChanging(value)
             ReportPropertyChanging("KY_Contractee")
-            _KY_Contractee = StructuralObject.SetValidValue(value)
+            _KY_Contractee = StructuralObject.SetValidValue(value, "KY_Contractee")
             ReportPropertyChanged("KY_Contractee")
             OnKY_ContracteeChanged()
         End Set
@@ -1013,7 +1012,7 @@ Public Partial Class Contract
         Set
             OnKY_Rate_FreqChanging(value)
             ReportPropertyChanging("KY_Rate_Freq")
-            _KY_Rate_Freq = StructuralObject.SetValidValue(value)
+            _KY_Rate_Freq = StructuralObject.SetValidValue(value, "KY_Rate_Freq")
             ReportPropertyChanged("KY_Rate_Freq")
             OnKY_Rate_FreqChanged()
         End Set
@@ -1038,7 +1037,7 @@ Public Partial Class Contract
         Set
             OnDesc_Contract_ServicesChanging(value)
             ReportPropertyChanging("Desc_Contract_Services")
-            _Desc_Contract_Services = StructuralObject.SetValidValue(value, true)
+            _Desc_Contract_Services = StructuralObject.SetValidValue(value, true, "Desc_Contract_Services")
             ReportPropertyChanged("Desc_Contract_Services")
             OnDesc_Contract_ServicesChanged()
         End Set
@@ -1328,7 +1327,7 @@ Public Partial Class Contract_Rate_Freq_LU
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -1343,7 +1342,7 @@ Public Partial Class Contract_Rate_Freq_LU
             If (_KY_Rate_Freq <> Value) Then
                 OnKY_Rate_FreqChanging(value)
                 ReportPropertyChanging("KY_Rate_Freq")
-                _KY_Rate_Freq = StructuralObject.SetValidValue(value)
+                _KY_Rate_Freq = StructuralObject.SetValidValue(value, "KY_Rate_Freq")
                 ReportPropertyChanged("KY_Rate_Freq")
                 OnKY_Rate_FreqChanged()
             End If
@@ -1369,7 +1368,7 @@ Public Partial Class Contract_Rate_Freq_LU
         Set
             OnDesc_Rate_FreqChanging(value)
             ReportPropertyChanging("Desc_Rate_Freq")
-            _Desc_Rate_Freq = StructuralObject.SetValidValue(value, false)
+            _Desc_Rate_Freq = StructuralObject.SetValidValue(value, false, "Desc_Rate_Freq")
             ReportPropertyChanged("Desc_Rate_Freq")
             OnDesc_Rate_FreqChanged()
         End Set
@@ -1432,7 +1431,7 @@ Public Partial Class Contract_Status_LU
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -1447,7 +1446,7 @@ Public Partial Class Contract_Status_LU
             If (_KY_Status_Contract <> Value) Then
                 OnKY_Status_ContractChanging(value)
                 ReportPropertyChanging("KY_Status_Contract")
-                _KY_Status_Contract = StructuralObject.SetValidValue(value)
+                _KY_Status_Contract = StructuralObject.SetValidValue(value, "KY_Status_Contract")
                 ReportPropertyChanged("KY_Status_Contract")
                 OnKY_Status_ContractChanged()
             End If
@@ -1473,7 +1472,7 @@ Public Partial Class Contract_Status_LU
         Set
             OnDesc_Contract_StatusChanging(value)
             ReportPropertyChanging("Desc_Contract_Status")
-            _Desc_Contract_Status = StructuralObject.SetValidValue(value, false)
+            _Desc_Contract_Status = StructuralObject.SetValidValue(value, false, "Desc_Contract_Status")
             ReportPropertyChanged("Desc_Contract_Status")
             OnDesc_Contract_StatusChanged()
         End Set
@@ -1546,7 +1545,7 @@ Public Partial Class Contractee
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -1561,7 +1560,7 @@ Public Partial Class Contractee
             If (_KY_Contractee <> Value) Then
                 OnKY_ContracteeChanging(value)
                 ReportPropertyChanging("KY_Contractee")
-                _KY_Contractee = StructuralObject.SetValidValue(value)
+                _KY_Contractee = StructuralObject.SetValidValue(value, "KY_Contractee")
                 ReportPropertyChanged("KY_Contractee")
                 OnKY_ContracteeChanged()
             End If
@@ -1587,7 +1586,7 @@ Public Partial Class Contractee
         Set
             OnName_ContracteeChanging(value)
             ReportPropertyChanging("Name_Contractee")
-            _Name_Contractee = StructuralObject.SetValidValue(value, false)
+            _Name_Contractee = StructuralObject.SetValidValue(value, false, "Name_Contractee")
             ReportPropertyChanged("Name_Contractee")
             OnName_ContracteeChanged()
         End Set
@@ -1612,7 +1611,7 @@ Public Partial Class Contractee
         Set
             OnEmail_ContracteeChanging(value)
             ReportPropertyChanging("Email_Contractee")
-            _Email_Contractee = StructuralObject.SetValidValue(value, false)
+            _Email_Contractee = StructuralObject.SetValidValue(value, false, "Email_Contractee")
             ReportPropertyChanged("Email_Contractee")
             OnEmail_ContracteeChanged()
         End Set
@@ -1637,7 +1636,7 @@ Public Partial Class Contractee
         Set
             OnAddress_Contractee_StreetChanging(value)
             ReportPropertyChanging("Address_Contractee_Street")
-            _Address_Contractee_Street = StructuralObject.SetValidValue(value, false)
+            _Address_Contractee_Street = StructuralObject.SetValidValue(value, false, "Address_Contractee_Street")
             ReportPropertyChanged("Address_Contractee_Street")
             OnAddress_Contractee_StreetChanged()
         End Set
@@ -1662,7 +1661,7 @@ Public Partial Class Contractee
         Set
             OnAddress_Contractee_CityChanging(value)
             ReportPropertyChanging("Address_Contractee_City")
-            _Address_Contractee_City = StructuralObject.SetValidValue(value, false)
+            _Address_Contractee_City = StructuralObject.SetValidValue(value, false, "Address_Contractee_City")
             ReportPropertyChanged("Address_Contractee_City")
             OnAddress_Contractee_CityChanged()
         End Set
@@ -1687,7 +1686,7 @@ Public Partial Class Contractee
         Set
             OnAddress_Contractee_StateChanging(value)
             ReportPropertyChanging("Address_Contractee_State")
-            _Address_Contractee_State = StructuralObject.SetValidValue(value, false)
+            _Address_Contractee_State = StructuralObject.SetValidValue(value, false, "Address_Contractee_State")
             ReportPropertyChanged("Address_Contractee_State")
             OnAddress_Contractee_StateChanged()
         End Set
@@ -1712,7 +1711,7 @@ Public Partial Class Contractee
         Set
             OnAdress_Contractee_ZipChanging(value)
             ReportPropertyChanging("Adress_Contractee_Zip")
-            _Adress_Contractee_Zip = StructuralObject.SetValidValue(value, false)
+            _Adress_Contractee_Zip = StructuralObject.SetValidValue(value, false, "Adress_Contractee_Zip")
             ReportPropertyChanged("Adress_Contractee_Zip")
             OnAdress_Contractee_ZipChanged()
         End Set
@@ -1791,7 +1790,7 @@ Public Partial Class Contractor
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -1806,7 +1805,7 @@ Public Partial Class Contractor
             If (_KY_Contractor <> Value) Then
                 OnKY_ContractorChanging(value)
                 ReportPropertyChanging("KY_Contractor")
-                _KY_Contractor = StructuralObject.SetValidValue(value)
+                _KY_Contractor = StructuralObject.SetValidValue(value, "KY_Contractor")
                 ReportPropertyChanged("KY_Contractor")
                 OnKY_ContractorChanged()
             End If
@@ -1832,7 +1831,7 @@ Public Partial Class Contractor
         Set
             OnPrimary_Contact_ContractorChanging(value)
             ReportPropertyChanging("Primary_Contact_Contractor")
-            _Primary_Contact_Contractor = StructuralObject.SetValidValue(value, true)
+            _Primary_Contact_Contractor = StructuralObject.SetValidValue(value, true, "Primary_Contact_Contractor")
             ReportPropertyChanged("Primary_Contact_Contractor")
             OnPrimary_Contact_ContractorChanged()
         End Set
@@ -1857,7 +1856,7 @@ Public Partial Class Contractor
         Set
             OnName_ContractorChanging(value)
             ReportPropertyChanging("Name_Contractor")
-            _Name_Contractor = StructuralObject.SetValidValue(value, true)
+            _Name_Contractor = StructuralObject.SetValidValue(value, true, "Name_Contractor")
             ReportPropertyChanged("Name_Contractor")
             OnName_ContractorChanged()
         End Set
@@ -1882,7 +1881,7 @@ Public Partial Class Contractor
         Set
             OnPhone_ContractorChanging(value)
             ReportPropertyChanging("Phone_Contractor")
-            _Phone_Contractor = StructuralObject.SetValidValue(value, true)
+            _Phone_Contractor = StructuralObject.SetValidValue(value, true, "Phone_Contractor")
             ReportPropertyChanged("Phone_Contractor")
             OnPhone_ContractorChanged()
         End Set
@@ -1907,7 +1906,7 @@ Public Partial Class Contractor
         Set
             OnEmail_ContractorChanging(value)
             ReportPropertyChanging("Email_Contractor")
-            _Email_Contractor = StructuralObject.SetValidValue(value, true)
+            _Email_Contractor = StructuralObject.SetValidValue(value, true, "Email_Contractor")
             ReportPropertyChanged("Email_Contractor")
             OnEmail_ContractorChanged()
         End Set
@@ -1932,7 +1931,7 @@ Public Partial Class Contractor
         Set
             OnAddress_ContractorChanging(value)
             ReportPropertyChanging("Address_Contractor")
-            _Address_Contractor = StructuralObject.SetValidValue(value, true)
+            _Address_Contractor = StructuralObject.SetValidValue(value, true, "Address_Contractor")
             ReportPropertyChanged("Address_Contractor")
             OnAddress_ContractorChanged()
         End Set
@@ -1957,7 +1956,7 @@ Public Partial Class Contractor
         Set
             OnNotes_ContractorChanging(value)
             ReportPropertyChanging("Notes_Contractor")
-            _Notes_Contractor = StructuralObject.SetValidValue(value, true)
+            _Notes_Contractor = StructuralObject.SetValidValue(value, true, "Notes_Contractor")
             ReportPropertyChanged("Notes_Contractor")
             OnNotes_ContractorChanged()
         End Set
@@ -1982,7 +1981,7 @@ Public Partial Class Contractor
         Set
             OnAdress_Contractor_2Changing(value)
             ReportPropertyChanging("Adress_Contractor_2")
-            _Adress_Contractor_2 = StructuralObject.SetValidValue(value, true)
+            _Adress_Contractor_2 = StructuralObject.SetValidValue(value, true, "Adress_Contractor_2")
             ReportPropertyChanged("Adress_Contractor_2")
             OnAdress_Contractor_2Changed()
         End Set
@@ -2007,7 +2006,7 @@ Public Partial Class Contractor
         Set
             OnCity_ContractorChanging(value)
             ReportPropertyChanging("City_Contractor")
-            _City_Contractor = StructuralObject.SetValidValue(value, true)
+            _City_Contractor = StructuralObject.SetValidValue(value, true, "City_Contractor")
             ReportPropertyChanged("City_Contractor")
             OnCity_ContractorChanged()
         End Set
@@ -2032,7 +2031,7 @@ Public Partial Class Contractor
         Set
             OnState_ContractorChanging(value)
             ReportPropertyChanging("State_Contractor")
-            _State_Contractor = StructuralObject.SetValidValue(value, true)
+            _State_Contractor = StructuralObject.SetValidValue(value, true, "State_Contractor")
             ReportPropertyChanged("State_Contractor")
             OnState_ContractorChanged()
         End Set
@@ -2057,7 +2056,7 @@ Public Partial Class Contractor
         Set
             OnZip_ContractorChanging(value)
             ReportPropertyChanging("Zip_Contractor")
-            _Zip_Contractor = StructuralObject.SetValidValue(value, true)
+            _Zip_Contractor = StructuralObject.SetValidValue(value, true, "Zip_Contractor")
             ReportPropertyChanged("Zip_Contractor")
             OnZip_ContractorChanged()
         End Set
@@ -2126,7 +2125,7 @@ Public Partial Class Contracts_Hours
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -2141,7 +2140,7 @@ Public Partial Class Contracts_Hours
             If (_KY_Contracts_Hours <> Value) Then
                 OnKY_Contracts_HoursChanging(value)
                 ReportPropertyChanging("KY_Contracts_Hours")
-                _KY_Contracts_Hours = StructuralObject.SetValidValue(value)
+                _KY_Contracts_Hours = StructuralObject.SetValidValue(value, "KY_Contracts_Hours")
                 ReportPropertyChanged("KY_Contracts_Hours")
                 OnKY_Contracts_HoursChanged()
             End If
@@ -2167,7 +2166,7 @@ Public Partial Class Contracts_Hours
         Set
             OnKY_ContractsChanging(value)
             ReportPropertyChanging("KY_Contracts")
-            _KY_Contracts = StructuralObject.SetValidValue(value)
+            _KY_Contracts = StructuralObject.SetValidValue(value, "KY_Contracts")
             ReportPropertyChanged("KY_Contracts")
             OnKY_ContractsChanged()
         End Set
@@ -2192,7 +2191,7 @@ Public Partial Class Contracts_Hours
         Set
             OnDate_Hours_WorkdChanging(value)
             ReportPropertyChanging("Date_Hours_Workd")
-            _Date_Hours_Workd = StructuralObject.SetValidValue(value)
+            _Date_Hours_Workd = StructuralObject.SetValidValue(value, "Date_Hours_Workd")
             ReportPropertyChanged("Date_Hours_Workd")
             OnDate_Hours_WorkdChanged()
         End Set
@@ -2217,7 +2216,7 @@ Public Partial Class Contracts_Hours
         Set
             OnContracts_Hours1Changing(value)
             ReportPropertyChanging("Contracts_Hours1")
-            _Contracts_Hours1 = StructuralObject.SetValidValue(value)
+            _Contracts_Hours1 = StructuralObject.SetValidValue(value, "Contracts_Hours1")
             ReportPropertyChanged("Contracts_Hours1")
             OnContracts_Hours1Changed()
         End Set
@@ -2242,7 +2241,7 @@ Public Partial Class Contracts_Hours
         Set
             OnDesc_Contracts_HoursChanging(value)
             ReportPropertyChanging("Desc_Contracts_Hours")
-            _Desc_Contracts_Hours = StructuralObject.SetValidValue(value, false)
+            _Desc_Contracts_Hours = StructuralObject.SetValidValue(value, false, "Desc_Contracts_Hours")
             ReportPropertyChanged("Desc_Contracts_Hours")
             OnDesc_Contracts_HoursChanged()
         End Set
@@ -2267,7 +2266,7 @@ Public Partial Class Contracts_Hours
         Set
             OnCat_MonthChanging(value)
             ReportPropertyChanging("Cat_Month")
-            _Cat_Month = StructuralObject.SetValidValue(value)
+            _Cat_Month = StructuralObject.SetValidValue(value, "Cat_Month")
             ReportPropertyChanged("Cat_Month")
             OnCat_MonthChanged()
         End Set
@@ -2343,7 +2342,7 @@ Public Partial Class Contracts_Rate
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -2358,7 +2357,7 @@ Public Partial Class Contracts_Rate
             If (_KY_Rate <> Value) Then
                 OnKY_RateChanging(value)
                 ReportPropertyChanging("KY_Rate")
-                _KY_Rate = StructuralObject.SetValidValue(value)
+                _KY_Rate = StructuralObject.SetValidValue(value, "KY_Rate")
                 ReportPropertyChanged("KY_Rate")
                 OnKY_RateChanged()
             End If
@@ -2384,7 +2383,7 @@ Public Partial Class Contracts_Rate
         Set
             OnAmount_rateChanging(value)
             ReportPropertyChanging("Amount_rate")
-            _Amount_rate = StructuralObject.SetValidValue(value)
+            _Amount_rate = StructuralObject.SetValidValue(value, "Amount_rate")
             ReportPropertyChanged("Amount_rate")
             OnAmount_rateChanged()
         End Set
@@ -2451,7 +2450,7 @@ Public Partial Class Deliverable
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -2466,7 +2465,7 @@ Public Partial Class Deliverable
             If (_KY_Deliverable <> Value) Then
                 OnKY_DeliverableChanging(value)
                 ReportPropertyChanging("KY_Deliverable")
-                _KY_Deliverable = StructuralObject.SetValidValue(value)
+                _KY_Deliverable = StructuralObject.SetValidValue(value, "KY_Deliverable")
                 ReportPropertyChanged("KY_Deliverable")
                 OnKY_DeliverableChanged()
             End If
@@ -2492,7 +2491,7 @@ Public Partial Class Deliverable
         Set
             OnKY_ContractsChanging(value)
             ReportPropertyChanging("KY_Contracts")
-            _KY_Contracts = StructuralObject.SetValidValue(value)
+            _KY_Contracts = StructuralObject.SetValidValue(value, "KY_Contracts")
             ReportPropertyChanged("KY_Contracts")
             OnKY_ContractsChanged()
         End Set
@@ -2517,7 +2516,7 @@ Public Partial Class Deliverable
         Set
             OnName_DeliverableChanging(value)
             ReportPropertyChanging("Name_Deliverable")
-            _Name_Deliverable = StructuralObject.SetValidValue(value, false)
+            _Name_Deliverable = StructuralObject.SetValidValue(value, false, "Name_Deliverable")
             ReportPropertyChanged("Name_Deliverable")
             OnName_DeliverableChanged()
         End Set
@@ -2542,7 +2541,7 @@ Public Partial Class Deliverable
         Set
             OnDate_Deliverable_DueChanging(value)
             ReportPropertyChanging("Date_Deliverable_Due")
-            _Date_Deliverable_Due = StructuralObject.SetValidValue(value)
+            _Date_Deliverable_Due = StructuralObject.SetValidValue(value, "Date_Deliverable_Due")
             ReportPropertyChanged("Date_Deliverable_Due")
             OnDate_Deliverable_DueChanged()
         End Set
@@ -2567,7 +2566,7 @@ Public Partial Class Deliverable
         Set
             OnTotal_Hours_DeliverableChanging(value)
             ReportPropertyChanging("Total_Hours_Deliverable")
-            _Total_Hours_Deliverable = StructuralObject.SetValidValue(value)
+            _Total_Hours_Deliverable = StructuralObject.SetValidValue(value, "Total_Hours_Deliverable")
             ReportPropertyChanged("Total_Hours_Deliverable")
             OnTotal_Hours_DeliverableChanged()
         End Set
@@ -2592,7 +2591,7 @@ Public Partial Class Deliverable
         Set
             OnNotes_DeliverableChanging(value)
             ReportPropertyChanging("Notes_Deliverable")
-            _Notes_Deliverable = StructuralObject.SetValidValue(value, true)
+            _Notes_Deliverable = StructuralObject.SetValidValue(value, true, "Notes_Deliverable")
             ReportPropertyChanged("Notes_Deliverable")
             OnNotes_DeliverableChanged()
         End Set
@@ -2617,7 +2616,7 @@ Public Partial Class Deliverable
         Set
             OnKY_Status_DeliverableChanging(value)
             ReportPropertyChanging("KY_Status_Deliverable")
-            _KY_Status_Deliverable = StructuralObject.SetValidValue(value)
+            _KY_Status_Deliverable = StructuralObject.SetValidValue(value, "KY_Status_Deliverable")
             ReportPropertyChanged("KY_Status_Deliverable")
             OnKY_Status_DeliverableChanged()
         End Set
@@ -2724,7 +2723,7 @@ Public Partial Class Deliverable_Status_Lu
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -2739,7 +2738,7 @@ Public Partial Class Deliverable_Status_Lu
             If (_KY_Status_Deliverable <> Value) Then
                 OnKY_Status_DeliverableChanging(value)
                 ReportPropertyChanging("KY_Status_Deliverable")
-                _KY_Status_Deliverable = StructuralObject.SetValidValue(value)
+                _KY_Status_Deliverable = StructuralObject.SetValidValue(value, "KY_Status_Deliverable")
                 ReportPropertyChanged("KY_Status_Deliverable")
                 OnKY_Status_DeliverableChanged()
             End If
@@ -2765,7 +2764,7 @@ Public Partial Class Deliverable_Status_Lu
         Set
             OnDesc_DeliverableChanging(value)
             ReportPropertyChanging("Desc_Deliverable")
-            _Desc_Deliverable = StructuralObject.SetValidValue(value, false)
+            _Desc_Deliverable = StructuralObject.SetValidValue(value, false, "Desc_Deliverable")
             ReportPropertyChanged("Desc_Deliverable")
             OnDesc_DeliverableChanged()
         End Set
@@ -2832,7 +2831,7 @@ Public Partial Class DFS_Hours
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -2847,7 +2846,7 @@ Public Partial Class DFS_Hours
             If (_KY_DFS_Hours <> Value) Then
                 OnKY_DFS_HoursChanging(value)
                 ReportPropertyChanging("KY_DFS_Hours")
-                _KY_DFS_Hours = StructuralObject.SetValidValue(value)
+                _KY_DFS_Hours = StructuralObject.SetValidValue(value, "KY_DFS_Hours")
                 ReportPropertyChanged("KY_DFS_Hours")
                 OnKY_DFS_HoursChanged()
             End If
@@ -2873,7 +2872,7 @@ Public Partial Class DFS_Hours
         Set
             Onint_HoursChanging(value)
             ReportPropertyChanging("int_Hours")
-            _int_Hours = StructuralObject.SetValidValue(value)
+            _int_Hours = StructuralObject.SetValidValue(value, "int_Hours")
             ReportPropertyChanged("int_Hours")
             Onint_HoursChanged()
         End Set
@@ -2898,7 +2897,7 @@ Public Partial Class DFS_Hours
         Set
             OnDesc_HoursChanging(value)
             ReportPropertyChanging("Desc_Hours")
-            _Desc_Hours = StructuralObject.SetValidValue(value, false)
+            _Desc_Hours = StructuralObject.SetValidValue(value, false, "Desc_Hours")
             ReportPropertyChanged("Desc_Hours")
             OnDesc_HoursChanged()
         End Set
@@ -2923,7 +2922,7 @@ Public Partial Class DFS_Hours
         Set
             Ondt_Hours_EnteredChanging(value)
             ReportPropertyChanging("dt_Hours_Entered")
-            _dt_Hours_Entered = StructuralObject.SetValidValue(value)
+            _dt_Hours_Entered = StructuralObject.SetValidValue(value, "dt_Hours_Entered")
             ReportPropertyChanged("dt_Hours_Entered")
             Ondt_Hours_EnteredChanged()
         End Set
@@ -2962,7 +2961,7 @@ Public Partial Class Estimated_Tax_payments
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -2977,7 +2976,7 @@ Public Partial Class Estimated_Tax_payments
             If (_KY_Estimated_Taxes <> Value) Then
                 OnKY_Estimated_TaxesChanging(value)
                 ReportPropertyChanging("KY_Estimated_Taxes")
-                _KY_Estimated_Taxes = StructuralObject.SetValidValue(value)
+                _KY_Estimated_Taxes = StructuralObject.SetValidValue(value, "KY_Estimated_Taxes")
                 ReportPropertyChanged("KY_Estimated_Taxes")
                 OnKY_Estimated_TaxesChanged()
             End If
@@ -3003,7 +3002,7 @@ Public Partial Class Estimated_Tax_payments
         Set
             OnDate_Est_Tax_PaidChanging(value)
             ReportPropertyChanging("Date_Est_Tax_Paid")
-            _Date_Est_Tax_Paid = StructuralObject.SetValidValue(value)
+            _Date_Est_Tax_Paid = StructuralObject.SetValidValue(value, "Date_Est_Tax_Paid")
             ReportPropertyChanged("Date_Est_Tax_Paid")
             OnDate_Est_Tax_PaidChanged()
         End Set
@@ -3028,7 +3027,7 @@ Public Partial Class Estimated_Tax_payments
         Set
             OnAmount_Estimated_TaxChanging(value)
             ReportPropertyChanging("Amount_Estimated_Tax")
-            _Amount_Estimated_Tax = StructuralObject.SetValidValue(value)
+            _Amount_Estimated_Tax = StructuralObject.SetValidValue(value, "Amount_Estimated_Tax")
             ReportPropertyChanged("Amount_Estimated_Tax")
             OnAmount_Estimated_TaxChanged()
         End Set
@@ -3053,7 +3052,7 @@ Public Partial Class Estimated_Tax_payments
         Set
             OnKY_Quarter_LUChanging(value)
             ReportPropertyChanging("KY_Quarter_LU")
-            _KY_Quarter_LU = StructuralObject.SetValidValue(value)
+            _KY_Quarter_LU = StructuralObject.SetValidValue(value, "KY_Quarter_LU")
             ReportPropertyChanged("KY_Quarter_LU")
             OnKY_Quarter_LUChanged()
         End Set
@@ -3078,7 +3077,7 @@ Public Partial Class Estimated_Tax_payments
         Set
             OnTax_YearChanging(value)
             ReportPropertyChanging("Tax_Year")
-            _Tax_Year = StructuralObject.SetValidValue(value, true)
+            _Tax_Year = StructuralObject.SetValidValue(value, true, "Tax_Year")
             ReportPropertyChanged("Tax_Year")
             OnTax_YearChanged()
         End Set
@@ -3103,7 +3102,7 @@ Public Partial Class Estimated_Tax_payments
         Set
             OnImg_Path_Est_TaxChanging(value)
             ReportPropertyChanging("Img_Path_Est_Tax")
-            _Img_Path_Est_Tax = StructuralObject.SetValidValue(value, true)
+            _Img_Path_Est_Tax = StructuralObject.SetValidValue(value, true, "Img_Path_Est_Tax")
             ReportPropertyChanged("Img_Path_Est_Tax")
             OnImg_Path_Est_TaxChanged()
         End Set
@@ -3177,7 +3176,7 @@ Public Partial Class Expense_Type_LU
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -3192,7 +3191,7 @@ Public Partial Class Expense_Type_LU
             If (_KY_Expense_Type <> Value) Then
                 OnKY_Expense_TypeChanging(value)
                 ReportPropertyChanging("KY_Expense_Type")
-                _KY_Expense_Type = StructuralObject.SetValidValue(value)
+                _KY_Expense_Type = StructuralObject.SetValidValue(value, "KY_Expense_Type")
                 ReportPropertyChanged("KY_Expense_Type")
                 OnKY_Expense_TypeChanged()
             End If
@@ -3218,7 +3217,7 @@ Public Partial Class Expense_Type_LU
         Set
             OnExpense_TypeChanging(value)
             ReportPropertyChanging("Expense_Type")
-            _Expense_Type = StructuralObject.SetValidValue(value, true)
+            _Expense_Type = StructuralObject.SetValidValue(value, true, "Expense_Type")
             ReportPropertyChanged("Expense_Type")
             OnExpense_TypeChanged()
         End Set
@@ -3243,7 +3242,7 @@ Public Partial Class Expense_Type_LU
         Set
             OnIRS_NumberChanging(value)
             ReportPropertyChanging("IRS_Number")
-            _IRS_Number = StructuralObject.SetValidValue(value, true)
+            _IRS_Number = StructuralObject.SetValidValue(value, true, "IRS_Number")
             ReportPropertyChanged("IRS_Number")
             OnIRS_NumberChanged()
         End Set
@@ -3312,7 +3311,7 @@ Public Partial Class Expenses
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -3327,7 +3326,7 @@ Public Partial Class Expenses
             If (_KY_Expense <> Value) Then
                 OnKY_ExpenseChanging(value)
                 ReportPropertyChanging("KY_Expense")
-                _KY_Expense = StructuralObject.SetValidValue(value)
+                _KY_Expense = StructuralObject.SetValidValue(value, "KY_Expense")
                 ReportPropertyChanged("KY_Expense")
                 OnKY_ExpenseChanged()
             End If
@@ -3353,7 +3352,7 @@ Public Partial Class Expenses
         Set
             OnKY_ContracteeChanging(value)
             ReportPropertyChanging("KY_Contractee")
-            _KY_Contractee = StructuralObject.SetValidValue(value)
+            _KY_Contractee = StructuralObject.SetValidValue(value, "KY_Contractee")
             ReportPropertyChanged("KY_Contractee")
             OnKY_ContracteeChanged()
         End Set
@@ -3378,7 +3377,7 @@ Public Partial Class Expenses
         Set
             OnAmountChanging(value)
             ReportPropertyChanging("Amount")
-            _Amount = StructuralObject.SetValidValue(value)
+            _Amount = StructuralObject.SetValidValue(value, "Amount")
             ReportPropertyChanged("Amount")
             OnAmountChanged()
         End Set
@@ -3403,7 +3402,7 @@ Public Partial Class Expenses
         Set
             OnDate_ExpenseChanging(value)
             ReportPropertyChanging("Date_Expense")
-            _Date_Expense = StructuralObject.SetValidValue(value)
+            _Date_Expense = StructuralObject.SetValidValue(value, "Date_Expense")
             ReportPropertyChanged("Date_Expense")
             OnDate_ExpenseChanged()
         End Set
@@ -3428,7 +3427,7 @@ Public Partial Class Expenses
         Set
             OnDescription_ExpenseChanging(value)
             ReportPropertyChanging("Description_Expense")
-            _Description_Expense = StructuralObject.SetValidValue(value, true)
+            _Description_Expense = StructuralObject.SetValidValue(value, true, "Description_Expense")
             ReportPropertyChanged("Description_Expense")
             OnDescription_ExpenseChanged()
         End Set
@@ -3453,7 +3452,7 @@ Public Partial Class Expenses
         Set
             OnImg_Path_ExpenseChanging(value)
             ReportPropertyChanging("Img_Path_Expense")
-            _Img_Path_Expense = StructuralObject.SetValidValue(value, true)
+            _Img_Path_Expense = StructuralObject.SetValidValue(value, true, "Img_Path_Expense")
             ReportPropertyChanged("Img_Path_Expense")
             OnImg_Path_ExpenseChanged()
         End Set
@@ -3478,7 +3477,7 @@ Public Partial Class Expenses
         Set
             OnKY_Expense_TypeChanging(value)
             ReportPropertyChanging("KY_Expense_Type")
-            _KY_Expense_Type = StructuralObject.SetValidValue(value)
+            _KY_Expense_Type = StructuralObject.SetValidValue(value, "KY_Expense_Type")
             ReportPropertyChanged("KY_Expense_Type")
             OnKY_Expense_TypeChanged()
         End Set
@@ -3503,7 +3502,7 @@ Public Partial Class Expenses
         Set
             OnTax_Year_ExpenseChanging(value)
             ReportPropertyChanging("Tax_Year_Expense")
-            _Tax_Year_Expense = StructuralObject.SetValidValue(value, true)
+            _Tax_Year_Expense = StructuralObject.SetValidValue(value, true, "Tax_Year_Expense")
             ReportPropertyChanged("Tax_Year_Expense")
             OnTax_Year_ExpenseChanged()
         End Set
@@ -3614,7 +3613,7 @@ Public Partial Class Income
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -3629,7 +3628,7 @@ Public Partial Class Income
             If (_KY_Income <> Value) Then
                 OnKY_IncomeChanging(value)
                 ReportPropertyChanging("KY_Income")
-                _KY_Income = StructuralObject.SetValidValue(value)
+                _KY_Income = StructuralObject.SetValidValue(value, "KY_Income")
                 ReportPropertyChanged("KY_Income")
                 OnKY_IncomeChanged()
             End If
@@ -3655,7 +3654,7 @@ Public Partial Class Income
         Set
             OnKY_ContractsChanging(value)
             ReportPropertyChanging("KY_Contracts")
-            _KY_Contracts = StructuralObject.SetValidValue(value)
+            _KY_Contracts = StructuralObject.SetValidValue(value, "KY_Contracts")
             ReportPropertyChanged("KY_Contracts")
             OnKY_ContractsChanged()
         End Set
@@ -3680,7 +3679,7 @@ Public Partial Class Income
         Set
             OnDate_IncomeChanging(value)
             ReportPropertyChanging("Date_Income")
-            _Date_Income = StructuralObject.SetValidValue(value)
+            _Date_Income = StructuralObject.SetValidValue(value, "Date_Income")
             ReportPropertyChanged("Date_Income")
             OnDate_IncomeChanged()
         End Set
@@ -3705,7 +3704,7 @@ Public Partial Class Income
         Set
             OnAmount_IncomeChanging(value)
             ReportPropertyChanging("Amount_Income")
-            _Amount_Income = StructuralObject.SetValidValue(value)
+            _Amount_Income = StructuralObject.SetValidValue(value, "Amount_Income")
             ReportPropertyChanged("Amount_Income")
             OnAmount_IncomeChanged()
         End Set
@@ -3730,7 +3729,7 @@ Public Partial Class Income
         Set
             OnCheck_Number_IncomeChanging(value)
             ReportPropertyChanging("Check_Number_Income")
-            _Check_Number_Income = StructuralObject.SetValidValue(value, true)
+            _Check_Number_Income = StructuralObject.SetValidValue(value, true, "Check_Number_Income")
             ReportPropertyChanged("Check_Number_Income")
             OnCheck_Number_IncomeChanged()
         End Set
@@ -3755,7 +3754,7 @@ Public Partial Class Income
         Set
             OnTax_Year_IncomeChanging(value)
             ReportPropertyChanging("Tax_Year_Income")
-            _Tax_Year_Income = StructuralObject.SetValidValue(value)
+            _Tax_Year_Income = StructuralObject.SetValidValue(value, "Tax_Year_Income")
             ReportPropertyChanged("Tax_Year_Income")
             OnTax_Year_IncomeChanged()
         End Set
@@ -3780,7 +3779,7 @@ Public Partial Class Income
         Set
             OnImg_Path_CheckChanging(value)
             ReportPropertyChanging("Img_Path_Check")
-            _Img_Path_Check = StructuralObject.SetValidValue(value, true)
+            _Img_Path_Check = StructuralObject.SetValidValue(value, true, "Img_Path_Check")
             ReportPropertyChanged("Img_Path_Check")
             OnImg_Path_CheckChanged()
         End Set
@@ -3805,7 +3804,7 @@ Public Partial Class Income
         Set
             OnKY_Invoice_HeaderChanging(value)
             ReportPropertyChanging("KY_Invoice_Header")
-            _KY_Invoice_Header = StructuralObject.SetValidValue(value)
+            _KY_Invoice_Header = StructuralObject.SetValidValue(value, "KY_Invoice_Header")
             ReportPropertyChanged("KY_Invoice_Header")
             OnKY_Invoice_HeaderChanged()
         End Set
@@ -3830,7 +3829,7 @@ Public Partial Class Income
         Set
             OnCat_MonthChanging(value)
             ReportPropertyChanging("Cat_Month")
-            _Cat_Month = StructuralObject.SetValidValue(value)
+            _Cat_Month = StructuralObject.SetValidValue(value, "Cat_Month")
             ReportPropertyChanged("Cat_Month")
             OnCat_MonthChanged()
         End Set
@@ -3914,7 +3913,7 @@ Public Partial Class Invoice_Header
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -3929,7 +3928,7 @@ Public Partial Class Invoice_Header
             If (_KY_Invoice_Header <> Value) Then
                 OnKY_Invoice_HeaderChanging(value)
                 ReportPropertyChanging("KY_Invoice_Header")
-                _KY_Invoice_Header = StructuralObject.SetValidValue(value)
+                _KY_Invoice_Header = StructuralObject.SetValidValue(value, "KY_Invoice_Header")
                 ReportPropertyChanged("KY_Invoice_Header")
                 OnKY_Invoice_HeaderChanged()
             End If
@@ -3955,7 +3954,7 @@ Public Partial Class Invoice_Header
         Set
             OnKY_ContractsChanging(value)
             ReportPropertyChanging("KY_Contracts")
-            _KY_Contracts = StructuralObject.SetValidValue(value)
+            _KY_Contracts = StructuralObject.SetValidValue(value, "KY_Contracts")
             ReportPropertyChanged("KY_Contracts")
             OnKY_ContractsChanged()
         End Set
@@ -3980,7 +3979,7 @@ Public Partial Class Invoice_Header
         Set
             OnDate_Invoice_CreatedChanging(value)
             ReportPropertyChanging("Date_Invoice_Created")
-            _Date_Invoice_Created = StructuralObject.SetValidValue(value)
+            _Date_Invoice_Created = StructuralObject.SetValidValue(value, "Date_Invoice_Created")
             ReportPropertyChanged("Date_Invoice_Created")
             OnDate_Invoice_CreatedChanged()
         End Set
@@ -4005,7 +4004,7 @@ Public Partial Class Invoice_Header
         Set
             OnDate_Invoice_BeginChanging(value)
             ReportPropertyChanging("Date_Invoice_Begin")
-            _Date_Invoice_Begin = StructuralObject.SetValidValue(value)
+            _Date_Invoice_Begin = StructuralObject.SetValidValue(value, "Date_Invoice_Begin")
             ReportPropertyChanged("Date_Invoice_Begin")
             OnDate_Invoice_BeginChanged()
         End Set
@@ -4030,7 +4029,7 @@ Public Partial Class Invoice_Header
         Set
             OnDate_Invoice_EndChanging(value)
             ReportPropertyChanging("Date_Invoice_End")
-            _Date_Invoice_End = StructuralObject.SetValidValue(value)
+            _Date_Invoice_End = StructuralObject.SetValidValue(value, "Date_Invoice_End")
             ReportPropertyChanged("Date_Invoice_End")
             OnDate_Invoice_EndChanged()
         End Set
@@ -4055,7 +4054,7 @@ Public Partial Class Invoice_Header
         Set
             OnDesc_InvoiceChanging(value)
             ReportPropertyChanging("Desc_Invoice")
-            _Desc_Invoice = StructuralObject.SetValidValue(value, false)
+            _Desc_Invoice = StructuralObject.SetValidValue(value, false, "Desc_Invoice")
             ReportPropertyChanged("Desc_Invoice")
             OnDesc_InvoiceChanged()
         End Set
@@ -4080,7 +4079,7 @@ Public Partial Class Invoice_Header
         Set
             OnInvoice_CompleteChanging(value)
             ReportPropertyChanging("Invoice_Complete")
-            _Invoice_Complete = StructuralObject.SetValidValue(value)
+            _Invoice_Complete = StructuralObject.SetValidValue(value, "Invoice_Complete")
             ReportPropertyChanged("Invoice_Complete")
             OnInvoice_CompleteChanged()
         End Set
@@ -4154,7 +4153,7 @@ Public Partial Class Quarter_LU
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -4169,7 +4168,7 @@ Public Partial Class Quarter_LU
             If (_KY_Quarter_LU <> Value) Then
                 OnKY_Quarter_LUChanging(value)
                 ReportPropertyChanging("KY_Quarter_LU")
-                _KY_Quarter_LU = StructuralObject.SetValidValue(value)
+                _KY_Quarter_LU = StructuralObject.SetValidValue(value, "KY_Quarter_LU")
                 ReportPropertyChanged("KY_Quarter_LU")
                 OnKY_Quarter_LUChanged()
             End If
@@ -4195,7 +4194,7 @@ Public Partial Class Quarter_LU
         Set
             OnDesc_quarterChanging(value)
             ReportPropertyChanging("Desc_quarter")
-            _Desc_quarter = StructuralObject.SetValidValue(value, true)
+            _Desc_quarter = StructuralObject.SetValidValue(value, true, "Desc_quarter")
             ReportPropertyChanged("Desc_quarter")
             OnDesc_quarterChanged()
         End Set
@@ -4268,7 +4267,7 @@ Public Partial Class Report
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -4283,7 +4282,7 @@ Public Partial Class Report
             If (_KY_Report <> Value) Then
                 OnKY_ReportChanging(value)
                 ReportPropertyChanging("KY_Report")
-                _KY_Report = StructuralObject.SetValidValue(value)
+                _KY_Report = StructuralObject.SetValidValue(value, "KY_Report")
                 ReportPropertyChanged("KY_Report")
                 OnKY_ReportChanged()
             End If
@@ -4309,7 +4308,7 @@ Public Partial Class Report
         Set
             OnKY_Report_TypeChanging(value)
             ReportPropertyChanging("KY_Report_Type")
-            _KY_Report_Type = StructuralObject.SetValidValue(value)
+            _KY_Report_Type = StructuralObject.SetValidValue(value, "KY_Report_Type")
             ReportPropertyChanged("KY_Report_Type")
             OnKY_Report_TypeChanged()
         End Set
@@ -4334,7 +4333,7 @@ Public Partial Class Report
         Set
             OnName_reportChanging(value)
             ReportPropertyChanging("Name_report")
-            _Name_report = StructuralObject.SetValidValue(value, false)
+            _Name_report = StructuralObject.SetValidValue(value, false, "Name_report")
             ReportPropertyChanged("Name_report")
             OnName_reportChanged()
         End Set
@@ -4359,7 +4358,7 @@ Public Partial Class Report
         Set
             OnPath_ReportChanging(value)
             ReportPropertyChanging("Path_Report")
-            _Path_Report = StructuralObject.SetValidValue(value, false)
+            _Path_Report = StructuralObject.SetValidValue(value, false, "Path_Report")
             ReportPropertyChanged("Path_Report")
             OnPath_ReportChanged()
         End Set
@@ -4384,7 +4383,7 @@ Public Partial Class Report
         Set
             OnEmail_SubjectChanging(value)
             ReportPropertyChanging("Email_Subject")
-            _Email_Subject = StructuralObject.SetValidValue(value, false)
+            _Email_Subject = StructuralObject.SetValidValue(value, false, "Email_Subject")
             ReportPropertyChanged("Email_Subject")
             OnEmail_SubjectChanged()
         End Set
@@ -4409,7 +4408,7 @@ Public Partial Class Report
         Set
             OnEmail_BodyChanging(value)
             ReportPropertyChanging("Email_Body")
-            _Email_Body = StructuralObject.SetValidValue(value, false)
+            _Email_Body = StructuralObject.SetValidValue(value, false, "Email_Body")
             ReportPropertyChanged("Email_Body")
             OnEmail_BodyChanged()
         End Set
@@ -4434,7 +4433,7 @@ Public Partial Class Report
         Set
             OnFileName_ReportChanging(value)
             ReportPropertyChanging("FileName_Report")
-            _FileName_Report = StructuralObject.SetValidValue(value, false)
+            _FileName_Report = StructuralObject.SetValidValue(value, false, "FileName_Report")
             ReportPropertyChanged("FileName_Report")
             OnFileName_ReportChanged()
         End Set
@@ -4510,7 +4509,7 @@ Public Partial Class Report_Types
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -4525,7 +4524,7 @@ Public Partial Class Report_Types
             If (_KY_Report_Type <> Value) Then
                 OnKY_Report_TypeChanging(value)
                 ReportPropertyChanging("KY_Report_Type")
-                _KY_Report_Type = StructuralObject.SetValidValue(value)
+                _KY_Report_Type = StructuralObject.SetValidValue(value, "KY_Report_Type")
                 ReportPropertyChanged("KY_Report_Type")
                 OnKY_Report_TypeChanged()
             End If
@@ -4551,7 +4550,7 @@ Public Partial Class Report_Types
         Set
             OnDS_Report_TypeChanging(value)
             ReportPropertyChanging("DS_Report_Type")
-            _DS_Report_Type = StructuralObject.SetValidValue(value, false)
+            _DS_Report_Type = StructuralObject.SetValidValue(value, false, "DS_Report_Type")
             ReportPropertyChanged("DS_Report_Type")
             OnDS_Report_TypeChanged()
         End Set
@@ -4612,7 +4611,7 @@ Public Partial Class Retirement
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -4627,7 +4626,7 @@ Public Partial Class Retirement
             If (_KY_Retirement <> Value) Then
                 OnKY_RetirementChanging(value)
                 ReportPropertyChanging("KY_Retirement")
-                _KY_Retirement = StructuralObject.SetValidValue(value)
+                _KY_Retirement = StructuralObject.SetValidValue(value, "KY_Retirement")
                 ReportPropertyChanged("KY_Retirement")
                 OnKY_RetirementChanged()
             End If
@@ -4653,7 +4652,7 @@ Public Partial Class Retirement
         Set
             OnDate_ContributionChanging(value)
             ReportPropertyChanging("Date_Contribution")
-            _Date_Contribution = StructuralObject.SetValidValue(value)
+            _Date_Contribution = StructuralObject.SetValidValue(value, "Date_Contribution")
             ReportPropertyChanged("Date_Contribution")
             OnDate_ContributionChanged()
         End Set
@@ -4678,7 +4677,7 @@ Public Partial Class Retirement
         Set
             OnAmount_ContributionChanging(value)
             ReportPropertyChanging("Amount_Contribution")
-            _Amount_Contribution = StructuralObject.SetValidValue(value)
+            _Amount_Contribution = StructuralObject.SetValidValue(value, "Amount_Contribution")
             ReportPropertyChanged("Amount_Contribution")
             OnAmount_ContributionChanged()
         End Set
@@ -4703,7 +4702,7 @@ Public Partial Class Retirement
         Set
             OnKY_Retirement_AccountChanging(value)
             ReportPropertyChanging("KY_Retirement_Account")
-            _KY_Retirement_Account = StructuralObject.SetValidValue(value)
+            _KY_Retirement_Account = StructuralObject.SetValidValue(value, "KY_Retirement_Account")
             ReportPropertyChanged("KY_Retirement_Account")
             OnKY_Retirement_AccountChanged()
         End Set
@@ -4728,7 +4727,7 @@ Public Partial Class Retirement
         Set
             OnTax_YearChanging(value)
             ReportPropertyChanging("Tax_Year")
-            _Tax_Year = StructuralObject.SetValidValue(value, true)
+            _Tax_Year = StructuralObject.SetValidValue(value, true, "Tax_Year")
             ReportPropertyChanged("Tax_Year")
             OnTax_YearChanged()
         End Set
@@ -4804,7 +4803,7 @@ Public Partial Class Retirement_Account_LU
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -4819,7 +4818,7 @@ Public Partial Class Retirement_Account_LU
             If (_KY_Retirement_Account <> Value) Then
                 OnKY_Retirement_AccountChanging(value)
                 ReportPropertyChanging("KY_Retirement_Account")
-                _KY_Retirement_Account = StructuralObject.SetValidValue(value)
+                _KY_Retirement_Account = StructuralObject.SetValidValue(value, "KY_Retirement_Account")
                 ReportPropertyChanged("KY_Retirement_Account")
                 OnKY_Retirement_AccountChanged()
             End If
@@ -4845,7 +4844,7 @@ Public Partial Class Retirement_Account_LU
         Set
             OnDesc_Retirement_AccountChanging(value)
             ReportPropertyChanging("Desc_Retirement_Account")
-            _Desc_Retirement_Account = StructuralObject.SetValidValue(value, false)
+            _Desc_Retirement_Account = StructuralObject.SetValidValue(value, false, "Desc_Retirement_Account")
             ReportPropertyChanged("Desc_Retirement_Account")
             OnDesc_Retirement_AccountChanged()
         End Set
@@ -4910,7 +4909,7 @@ Public Partial Class sysdiagram
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -4924,7 +4923,7 @@ Public Partial Class sysdiagram
         Set
             OnnameChanging(value)
             ReportPropertyChanging("name")
-            _name = StructuralObject.SetValidValue(value, false)
+            _name = StructuralObject.SetValidValue(value, false, "name")
             ReportPropertyChanged("name")
             OnnameChanged()
         End Set
@@ -4949,7 +4948,7 @@ Public Partial Class sysdiagram
         Set
             Onprincipal_idChanging(value)
             ReportPropertyChanging("principal_id")
-            _principal_id = StructuralObject.SetValidValue(value)
+            _principal_id = StructuralObject.SetValidValue(value, "principal_id")
             ReportPropertyChanged("principal_id")
             Onprincipal_idChanged()
         End Set
@@ -4975,7 +4974,7 @@ Public Partial Class sysdiagram
             If (_diagram_id <> Value) Then
                 Ondiagram_idChanging(value)
                 ReportPropertyChanging("diagram_id")
-                _diagram_id = StructuralObject.SetValidValue(value)
+                _diagram_id = StructuralObject.SetValidValue(value, "diagram_id")
                 ReportPropertyChanged("diagram_id")
                 Ondiagram_idChanged()
             End If
@@ -5001,7 +5000,7 @@ Public Partial Class sysdiagram
         Set
             OnversionChanging(value)
             ReportPropertyChanging("version")
-            _version = StructuralObject.SetValidValue(value)
+            _version = StructuralObject.SetValidValue(value, "version")
             ReportPropertyChanged("version")
             OnversionChanged()
         End Set
@@ -5026,7 +5025,7 @@ Public Partial Class sysdiagram
         Set
             OndefinitionChanging(value)
             ReportPropertyChanging("definition")
-            _definition = StructuralObject.SetValidValue(value, true)
+            _definition = StructuralObject.SetValidValue(value, true, "definition")
             ReportPropertyChanged("definition")
             OndefinitionChanged()
         End Set
@@ -5071,7 +5070,7 @@ Public Partial Class Task
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -5086,7 +5085,7 @@ Public Partial Class Task
             If (_KY_Tasks <> Value) Then
                 OnKY_TasksChanging(value)
                 ReportPropertyChanging("KY_Tasks")
-                _KY_Tasks = StructuralObject.SetValidValue(value)
+                _KY_Tasks = StructuralObject.SetValidValue(value, "KY_Tasks")
                 ReportPropertyChanged("KY_Tasks")
                 OnKY_TasksChanged()
             End If
@@ -5112,7 +5111,7 @@ Public Partial Class Task
         Set
             OnKY_Task_StatusChanging(value)
             ReportPropertyChanging("KY_Task_Status")
-            _KY_Task_Status = StructuralObject.SetValidValue(value)
+            _KY_Task_Status = StructuralObject.SetValidValue(value, "KY_Task_Status")
             ReportPropertyChanged("KY_Task_Status")
             OnKY_Task_StatusChanged()
         End Set
@@ -5137,7 +5136,7 @@ Public Partial Class Task
         Set
             OnDesc_TasksChanging(value)
             ReportPropertyChanging("Desc_Tasks")
-            _Desc_Tasks = StructuralObject.SetValidValue(value, false)
+            _Desc_Tasks = StructuralObject.SetValidValue(value, false, "Desc_Tasks")
             ReportPropertyChanged("Desc_Tasks")
             OnDesc_TasksChanged()
         End Set
@@ -5162,7 +5161,7 @@ Public Partial Class Task
         Set
             OnDate_Due_taskChanging(value)
             ReportPropertyChanging("Date_Due_task")
-            _Date_Due_task = StructuralObject.SetValidValue(value)
+            _Date_Due_task = StructuralObject.SetValidValue(value, "Date_Due_task")
             ReportPropertyChanged("Date_Due_task")
             OnDate_Due_taskChanged()
         End Set
@@ -5187,7 +5186,7 @@ Public Partial Class Task
         Set
             OnNotes_TaskChanging(value)
             ReportPropertyChanging("Notes_Task")
-            _Notes_Task = StructuralObject.SetValidValue(value, true)
+            _Notes_Task = StructuralObject.SetValidValue(value, true, "Notes_Task")
             ReportPropertyChanged("Notes_Task")
             OnNotes_TaskChanged()
         End Set
@@ -5212,7 +5211,7 @@ Public Partial Class Task
         Set
             OnKY_ContractsChanging(value)
             ReportPropertyChanging("KY_Contracts")
-            _KY_Contracts = StructuralObject.SetValidValue(value)
+            _KY_Contracts = StructuralObject.SetValidValue(value, "KY_Contracts")
             ReportPropertyChanged("KY_Contracts")
             OnKY_ContractsChanged()
         End Set
@@ -5319,7 +5318,7 @@ Public Partial Class Task_Status_LU
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -5334,7 +5333,7 @@ Public Partial Class Task_Status_LU
             If (_KY_Task_Status <> Value) Then
                 OnKY_Task_StatusChanging(value)
                 ReportPropertyChanging("KY_Task_Status")
-                _KY_Task_Status = StructuralObject.SetValidValue(value)
+                _KY_Task_Status = StructuralObject.SetValidValue(value, "KY_Task_Status")
                 ReportPropertyChanged("KY_Task_Status")
                 OnKY_Task_StatusChanged()
             End If
@@ -5360,7 +5359,7 @@ Public Partial Class Task_Status_LU
         Set
             OnDesc_Task_StatusChanging(value)
             ReportPropertyChanging("Desc_Task_Status")
-            _Desc_Task_Status = StructuralObject.SetValidValue(value, false)
+            _Desc_Task_Status = StructuralObject.SetValidValue(value, false, "Desc_Task_Status")
             ReportPropertyChanged("Desc_Task_Status")
             OnDesc_Task_StatusChanged()
         End Set
@@ -5427,7 +5426,7 @@ Public Partial Class Version
 
     #End Region
 
-    #Region "Primitive Properties"
+    #Region "Simple Properties"
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -5442,7 +5441,7 @@ Public Partial Class Version
             If (_KY_Version <> Value) Then
                 OnKY_VersionChanging(value)
                 ReportPropertyChanging("KY_Version")
-                _KY_Version = StructuralObject.SetValidValue(value)
+                _KY_Version = StructuralObject.SetValidValue(value, "KY_Version")
                 ReportPropertyChanged("KY_Version")
                 OnKY_VersionChanged()
             End If
@@ -5468,7 +5467,7 @@ Public Partial Class Version
         Set
             OnNumber_VersionChanging(value)
             ReportPropertyChanging("Number_Version")
-            _Number_Version = StructuralObject.SetValidValue(value, false)
+            _Number_Version = StructuralObject.SetValidValue(value, false, "Number_Version")
             ReportPropertyChanged("Number_Version")
             OnNumber_VersionChanged()
         End Set
@@ -5493,7 +5492,7 @@ Public Partial Class Version
         Set
             OnDate_VersionChanging(value)
             ReportPropertyChanging("Date_Version")
-            _Date_Version = StructuralObject.SetValidValue(value)
+            _Date_Version = StructuralObject.SetValidValue(value, "Date_Version")
             ReportPropertyChanged("Date_Version")
             OnDate_VersionChanged()
         End Set
@@ -5518,7 +5517,7 @@ Public Partial Class Version
         Set
             OnDesc_VersionChanging(value)
             ReportPropertyChanging("Desc_Version")
-            _Desc_Version = StructuralObject.SetValidValue(value, false)
+            _Desc_Version = StructuralObject.SetValidValue(value, false, "Desc_Version")
             ReportPropertyChanged("Desc_Version")
             OnDesc_VersionChanged()
         End Set
@@ -5536,5 +5535,4 @@ Public Partial Class Version
 End Class
 
 #End Region
-
 

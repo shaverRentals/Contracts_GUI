@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ContractsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="ContractsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="__RefactorLog">
           <Key>
             <PropertyRef Name="OperationKey" />
@@ -400,31 +400,31 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="ContractsModelStoreContainer">
-          <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Contract_Rate_Freq_LU" EntityType="Self.Contract_Rate_Freq_LU" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Contract_Status_LU" EntityType="Self.Contract_Status_LU" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Contractee" EntityType="Self.Contractee" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Contractors" EntityType="Self.Contractors" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Contracts" EntityType="Self.Contracts" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Contracts_Hours" EntityType="Self.Contracts_Hours" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Contracts_Rate" EntityType="Self.Contracts_Rate" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Deliverable" EntityType="Self.Deliverable" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Deliverable_Status_Lu" EntityType="Self.Deliverable_Status_Lu" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="DFS_Hours" EntityType="Self.DFS_Hours" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Estimated_Tax_payments" EntityType="Self.Estimated_Tax_payments" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Expense_Type_LU" EntityType="Self.Expense_Type_LU" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Expenses" EntityType="Self.Expenses" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Income" EntityType="Self.Income" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Invoice_Header" EntityType="Self.Invoice_Header" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Quarter_LU" EntityType="Self.Quarter_LU" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Report_Types" EntityType="Self.Report_Types" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Reports" EntityType="Self.Reports" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Retirement" EntityType="Self.Retirement" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Retirement_Account_LU" EntityType="Self.Retirement_Account_LU" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Task_Status_LU" EntityType="Self.Task_Status_LU" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Tasks" EntityType="Self.Tasks" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Version" EntityType="Self.Version" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Contract_Rate_Freq_LU" EntityType="Self.Contract_Rate_Freq_LU" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Contract_Status_LU" EntityType="Self.Contract_Status_LU" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Contractee" EntityType="Self.Contractee" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Contractors" EntityType="Self.Contractors" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Contracts" EntityType="Self.Contracts" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Contracts_Hours" EntityType="Self.Contracts_Hours" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Contracts_Rate" EntityType="Self.Contracts_Rate" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Deliverable" EntityType="Self.Deliverable" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Deliverable_Status_Lu" EntityType="Self.Deliverable_Status_Lu" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="DFS_Hours" EntityType="Self.DFS_Hours" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Estimated_Tax_payments" EntityType="Self.Estimated_Tax_payments" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Expense_Type_LU" EntityType="Self.Expense_Type_LU" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Expenses" EntityType="Self.Expenses" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Income" EntityType="Self.Income" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Invoice_Header" EntityType="Self.Invoice_Header" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Quarter_LU" EntityType="Self.Quarter_LU" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Report_Types" EntityType="Self.Report_Types" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Reports" EntityType="Self.Reports" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Retirement" EntityType="Self.Retirement" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Retirement_Account_LU" EntityType="Self.Retirement_Account_LU" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Task_Status_LU" EntityType="Self.Task_Status_LU" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Tasks" EntityType="Self.Tasks" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Version" EntityType="Self.Version" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
           <AssociationSet Name="FK_Contracts_Hours_Contracts" Association="Self.FK_Contracts_Hours_Contracts">
             <End Role="Contracts" EntitySet="Contracts" />
             <End Role="Contracts_Hours" EntitySet="Contracts_Hours" />
@@ -477,8 +477,8 @@
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="ContractsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="ContractsEntities" annotation:LazyLoadingEnabled="true">
+      <Schema Namespace="ContractsModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="ContractsEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
           <EntitySet Name="DFS_Hours" EntityType="ContractsModel.DFS_Hours" />
           <EntitySet Name="Contract_Status_LU" EntityType="ContractsModel.Contract_Status_LU" />
           <EntitySet Name="Contractors" EntityType="ContractsModel.Contractor" />
@@ -577,7 +577,7 @@
           <Key>
             <PropertyRef Name="KY_DFS_Hours" />
           </Key>
-          <Property Name="KY_DFS_Hours" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KY_DFS_Hours" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="int_Hours" Type="Double" Nullable="false" />
           <Property Name="Desc_Hours" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Type="DateTime" Name="dt_Hours_Entered" Nullable="false" Precision="0" />
@@ -586,7 +586,7 @@
           <Key>
             <PropertyRef Name="KY_Status_Contract" />
           </Key>
-          <Property Type="Int32" Name="KY_Status_Contract" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Status_Contract" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="Desc_Contract_Status" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Contracts" Relationship="ContractsModel.FK_Contracts_Contract_Status_LU" FromRole="Contract_Status_LU" ToRole="Contract" />
         </EntityType>
@@ -594,7 +594,7 @@
           <Key>
             <PropertyRef Name="KY_Contractor" />
           </Key>
-          <Property Type="Int32" Name="KY_Contractor" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Contractor" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="Primary_Contact_Contractor" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="Name_Contractor" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="Phone_Contractor" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -663,7 +663,7 @@
           <Key>
             <PropertyRef Name="KY_Deliverable" />
           </Key>
-          <Property Type="Int32" Name="KY_Deliverable" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Deliverable" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Int32" Name="KY_Contracts" Nullable="false" />
           <Property Type="String" Name="Name_Deliverable" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="DateTime" Name="Date_Deliverable_Due" Precision="0" />
@@ -677,7 +677,7 @@
           <Key>
             <PropertyRef Name="KY_Status_Deliverable" />
           </Key>
-          <Property Type="Int32" Name="KY_Status_Deliverable" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Status_Deliverable" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="Desc_Deliverable" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Deliverables" Relationship="ContractsModel.FK_Deliverable_Deliverable_Status_Lu" FromRole="Deliverable_Status_Lu" ToRole="Deliverable" />
         </EntityType>
@@ -685,7 +685,7 @@
           <Key>
             <PropertyRef Name="KY_Task_Status" />
           </Key>
-          <Property Type="Int32" Name="KY_Task_Status" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Task_Status" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="Desc_Task_Status" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Tasks" Relationship="ContractsModel.FK_Tasks_Task_Status_LU" FromRole="Task_Status_LU" ToRole="Task" />
         </EntityType>
@@ -693,7 +693,7 @@
           <Key>
             <PropertyRef Name="KY_Tasks" />
           </Key>
-          <Property Type="Int32" Name="KY_Tasks" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Tasks" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Int32" Name="KY_Task_Status" Nullable="false" />
           <Property Type="String" Name="Desc_Tasks" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="DateTime" Name="Date_Due_task" Precision="0" />
@@ -742,7 +742,7 @@
           <Key>
             <PropertyRef Name="KY_Contractee" />
           </Key>
-          <Property Type="Int32" Name="KY_Contractee" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Contractee" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="Name_Contractee" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="Email_Contractee" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="Address_Contractee_Street" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
@@ -756,7 +756,7 @@
           <Key>
             <PropertyRef Name="KY_Contracts_Hours" />
           </Key>
-          <Property Type="Int32" Name="KY_Contracts_Hours" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Contracts_Hours" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Int32" Name="KY_Contracts" Nullable="false" />
           <Property Type="DateTime" Name="Date_Hours_Workd" Nullable="false" Precision="0" />
           <Property Type="Double" Name="Contracts_Hours1" Nullable="false" />
@@ -768,7 +768,7 @@
           <Key>
             <PropertyRef Name="KY_Rate" />
           </Key>
-          <Property Type="Int32" Name="KY_Rate" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Rate" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Decimal" Name="Amount_rate" Nullable="false" Precision="19" Scale="4" />
           <NavigationProperty Name="Contracts" Relationship="ContractsModel.FK_Contracts_Contracts_Rate" FromRole="Contracts_Rate" ToRole="Contract" />
         </EntityType>
@@ -824,7 +824,7 @@
           <Key>
             <PropertyRef Name="KY_Rate_Freq" />
           </Key>
-          <Property Type="Int32" Name="KY_Rate_Freq" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Rate_Freq" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="Desc_Rate_Freq" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Contracts" Relationship="ContractsModel.FK_Contracts_Contract_Rate_Freq_LU" FromRole="Contract_Rate_Freq_LU" ToRole="Contract" />
         </EntityType>
@@ -844,7 +844,7 @@
           <Key>
             <PropertyRef Name="KY_Invoice_Header" />
           </Key>
-          <Property Type="Int32" Name="KY_Invoice_Header" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Invoice_Header" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Int32" Name="KY_Contracts" Nullable="false" />
           <Property Type="DateTime" Name="Date_Invoice_Created" Nullable="false" Precision="0" />
           <Property Type="DateTime" Name="Date_Invoice_Begin" Nullable="false" Precision="0" />
@@ -869,7 +869,7 @@
           <Key>
             <PropertyRef Name="KY_Report_Type" />
           </Key>
-          <Property Type="Int32" Name="KY_Report_Type" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Report_Type" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="DS_Report_Type" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Reports" Relationship="ContractsModel.FK_Reports_Report_Types" FromRole="Report_Types" ToRole="Report" />
         </EntityType>
@@ -877,7 +877,7 @@
           <Key>
             <PropertyRef Name="KY_Report" />
           </Key>
-          <Property Type="Int32" Name="KY_Report" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Report" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Int32" Name="KY_Report_Type" Nullable="false" />
           <Property Type="String" Name="Name_report" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="Path_Report" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -902,7 +902,7 @@
           <Key>
             <PropertyRef Name="KY_Expense_Type" />
           </Key>
-          <Property Type="Int32" Name="KY_Expense_Type" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Expense_Type" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="Expense_Type" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Expenses" Relationship="ContractsModel.FK_Expenses_Expense_Type_LU" FromRole="Expense_Type_LU" ToRole="Expens" />
           <Property Type="String" Name="IRS_Number" MaxLength="12" FixedLength="false" Unicode="false" />
@@ -911,7 +911,7 @@
           <Key>
             <PropertyRef Name="KY_Expense" />
           </Key>
-          <Property Type="Int32" Name="KY_Expense" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Expense" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Int32" Name="KY_Contractee" Nullable="false" />
           <Property Type="Decimal" Name="Amount" Nullable="false" Precision="19" Scale="4" />
           <Property Type="DateTime" Name="Date_Expense" Nullable="false" Precision="0" />
@@ -950,7 +950,7 @@
           <Key>
             <PropertyRef Name="KY_Income" />
           </Key>
-          <Property Type="Int32" Name="KY_Income" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Income" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Int32" Name="KY_Contracts" Nullable="false" />
           <Property Type="DateTime" Name="Date_Income" Nullable="false" Precision="0" />
           <Property Type="Decimal" Name="Amount_Income" Nullable="false" Precision="19" Scale="4" />
@@ -977,7 +977,7 @@
           <Key>
             <PropertyRef Name="KY_Version" />
           </Key>
-          <Property Type="Int32" Name="KY_Version" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KY_Version" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="Number_Version" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="DateTime" Name="Date_Version" Nullable="false" Precision="0" />
           <Property Type="String" Name="Desc_Version" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -988,7 +988,7 @@
           </Key>
           <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
           <Property Type="Int32" Name="principal_id" Nullable="false" />
-          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="Int32" Name="version" />
           <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
         </EntityType>
@@ -1002,7 +1002,7 @@
           <Key>
             <PropertyRef Name="KY_Retirement" />
           </Key>
-          <Property Name="KY_Retirement" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KY_Retirement" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Date_Contribution" Type="DateTime" Precision="0" />
           <Property Name="Amount_Contribution" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="KY_Retirement_Account" Type="Int32" />
@@ -1013,7 +1013,7 @@
           <Key>
             <PropertyRef Name="KY_Retirement_Account" />
           </Key>
-          <Property Name="KY_Retirement_Account" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KY_Retirement_Account" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Desc_Retirement_Account" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Retirements" Relationship="ContractsModel.FK_Retirement_Retirement_Account_LU" FromRole="Retirement_Account_LU" ToRole="Retirement" />
         </EntityType>
@@ -1033,7 +1033,7 @@
           <Key>
             <PropertyRef Name="KY_Estimated_Taxes" />
           </Key>
-          <Property Name="KY_Estimated_Taxes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KY_Estimated_Taxes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Date_Est_Tax_Paid" Type="DateTime" Precision="0" />
           <Property Name="Amount_Estimated_Tax" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="KY_Quarter_LU" Type="Int32" />
@@ -1045,7 +1045,7 @@
           <Key>
             <PropertyRef Name="KY_Quarter_LU" />
           </Key>
-          <Property Name="KY_Quarter_LU" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KY_Quarter_LU" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="Desc_quarter" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Estimated_Tax_payments1" Relationship="ContractsModel.FK_Quarter_LU1" FromRole="Quarter_LU" ToRole="Estimated_Tax_payments" />
         </EntityType>
@@ -1065,7 +1065,7 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ContractsModelStoreContainer" CdmEntityContainer="ContractsEntities">
           <EntitySetMapping Name="DFS_Hours">
             <EntityTypeMapping TypeName="ContractsModel.DFS_Hours">
@@ -1347,130 +1347,130 @@
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
-    <Connection>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
-      </DesignerInfoPropertySet>
-    </Connection>
-    <Options>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="True" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
-        <DesignerProperty Name="UseLegacyProvider" Value="True" />
-      </DesignerInfoPropertySet>
-    </Options>
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="True" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams>
-      <Diagram Name="Model1">
-        <EntityTypeShape EntityType="ContractsModel.DFS_Hours" Width="1.5" PointX="0.5" PointY="0.5" Height="1.497030436197917" IsExpanded="true" />
-        <EntityTypeShape EntityType="ContractsModel.Contract_Status_LU" Width="1.875" PointX="8.125" PointY="0.75" Height="1.3462939453124996" />
-        <EntityTypeShape EntityType="ContractsModel.Contractor" Width="2" PointX="2.625" PointY="0.5" Height="3.3263964843749996" />
-        <EntityTypeShape EntityType="ContractsModel.Contract" Width="1.875" PointX="4.75" PointY="0.5" Height="5.2494108072916656" />
-        <AssociationConnector Association="ContractsModel.FK_Contracts_Contract_Status_LU" >
-          <ConnectorPoint PointX="8.125" PointY="1.5478417968750002" />
-          <ConnectorPoint PointX="6.625" PointY="1.5478417968750002" />
-        </AssociationConnector>
-        <AssociationConnector Association="ContractsModel.FK_Contracts_Contractors" >
-          <ConnectorPoint PointX="4.625" PointY="2.1631982421875" />
-          <ConnectorPoint PointX="4.75" PointY="2.1631982421875" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="ContractsModel.Deliverable" Width="1.5" PointX="2.625" PointY="3" Height="2.4014493815104174" />
-        <EntityTypeShape EntityType="ContractsModel.Deliverable_Status_Lu" Width="1.5" PointX="0.75" PointY="3.125" Height="1.3462939453124996" />
-        <EntityTypeShape EntityType="ContractsModel.Task_Status_LU" Width="1.5" PointX="9.75" PointY="2.75" Height="1.3462939453124996" />
-        <EntityTypeShape EntityType="ContractsModel.Task" Width="1.5" PointX="7.25" PointY="2.625" Height="2.0999763997395826" />
-        <AssociationConnector Association="ContractsModel.FK_Deliverable_Contracts" >
-          <ConnectorPoint PointX="4.75" PointY="4.6631982421875" />
-          <ConnectorPoint PointX="4.125" PointY="4.6631982421875" />
-        </AssociationConnector>
-        <AssociationConnector Association="ContractsModel.FK_Deliverable_Deliverable_Status_Lu" >
-          <ConnectorPoint PointX="2.25" PointY="3.922841796875" />
-          <ConnectorPoint PointX="2.4145466666666664" PointY="3.9228417968749993" />
-          <ConnectorPoint PointX="2.5812133333333334" PointY="3.922841796875" />
-          <ConnectorPoint PointX="2.625" PointY="3.922841796875" />
-        </AssociationConnector>
-        <AssociationConnector Association="ContractsModel.FK_Tasks_Task_Status_LU" >
-          <ConnectorPoint PointX="9.75" PointY="3.42314697265625" />
-          <ConnectorPoint PointX="8.75" PointY="3.42314697265625" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="ContractsModel.Contractee" Width="1.5" PointX="2.875" PointY="5.5" Height="2.0999763997395817" />
-        <EntityTypeShape EntityType="ContractsModel.Contracts_Hours" Width="1.5" PointX="6.875" PointY="5" Height="1.9492399088541665" />
-        <EntityTypeShape EntityType="ContractsModel.Contracts_Rate" Width="1.5" PointX="0.875" PointY="5" Height="1.4970304361979165" />
-        <AssociationConnector Association="ContractsModel.FK_Contracts_Contractee" >
-          <ConnectorPoint PointX="4.375" PointY="7.11469921875" />
-          <ConnectorPoint PointX="5.1826795104166674" PointY="7.1146992187499993" />
-          <ConnectorPoint PointX="5.3493461770833335" PointY="7.11469921875" />
-          <ConnectorPoint PointX="5.3816666666666668" PointY="7.1146992187499993" />
-          <ConnectorPoint PointX="5.5483333333333329" PointY="7.11469921875" />
-          <ConnectorPoint PointX="5.860936875" PointY="7.11469921875" />
-          <ConnectorPoint PointX="5.860936875" PointY="5.7494108072916656" />
-        </AssociationConnector>
-        <AssociationConnector Association="ContractsModel.FK_Contracts_Contracts_Rate" >
-          <ConnectorPoint PointX="2.375" PointY="5.797841796875" />
-          <ConnectorPoint PointX="2.49788" PointY="5.797841796875" />
-          <ConnectorPoint PointX="2.49788" PointY="0.37711999999999996" />
-          <ConnectorPoint PointX="5.6875" PointY="0.37711999999999996" />
-          <ConnectorPoint PointX="5.6875" PointY="0.5" />
-        </AssociationConnector>
-        <AssociationConnector Association="ContractsModel.FK_Contracts_Hours_Contracts" >
-          <ConnectorPoint PointX="6.625" PointY="5.3747054036458328" />
-          <ConnectorPoint PointX="6.875" PointY="5.3747054036458328" />
-        </AssociationConnector>
-        <AssociationConnector Association="ContractsModel.FK_Tasks_Contracts" >
-          <ConnectorPoint PointX="6.625" PointY="3.78125" />
-          <ConnectorPoint PointX="7.25" PointY="3.78125" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="ContractsModel.Contract_Rate_Freq_LU" Width="2" PointX="0.5" PointY="6.75" Height="1.3462939453125031" />
-        <AssociationConnector Association="ContractsModel.FK_Contracts_Contract_Rate_Freq_LU" >
-          <ConnectorPoint PointX="0.5" PointY="7.547841796875" />
-          <ConnectorPoint PointX="0.25999999999999995" PointY="7.547841796875" />
-          <ConnectorPoint PointX="0.25999999999999995" PointY="8.58568359375" />
-          <ConnectorPoint PointX="3.7916666666666665" PointY="8.58568359375" />
-          <ConnectorPoint PointX="3.9583333333333335" PointY="8.58568359375" />
-          <ConnectorPoint PointX="5.1826795104166674" PointY="8.58568359375" />
-          <ConnectorPoint PointX="5.3493461770833335" PointY="8.58568359375" />
-          <ConnectorPoint PointX="5.465" PointY="8.58568359375" />
-          <ConnectorPoint PointX="5.465" PointY="6.84" />
-          <ConnectorPoint PointX="5.4070256875000009" PointY="6.84" />
-          <ConnectorPoint PointX="5.4070256875000009" PointY="5.7494108072916656" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="ContractsModel.Invoice_Header" Width="1.5" PointX="5.625" PointY="7" Height="2.0999763997395817" />
-        <AssociationConnector Association="ContractsModel.FK_Invoice_Header_Contracts" >
-          <ConnectorPoint PointX="6.3054684375" PointY="5.7494108072916656" />
-          <ConnectorPoint PointX="6.3054684375" PointY="7" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="ContractsModel.Report_Types" Width="1.5" PointX="8.5" PointY="4.875" Height="1.3462939453125031" />
-        <EntityTypeShape EntityType="ContractsModel.Report" Width="1.5" PointX="10.25" PointY="4.875" Height="2.0999763997395888" />
-        <AssociationConnector Association="ContractsModel.FK_Reports_Report_Types" >
-          <ConnectorPoint PointX="10" PointY="5.5481469726562516" />
-          <ConnectorPoint PointX="10.25" PointY="5.5481469726562516" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="ContractsModel.Expense_Type_LU" Width="1.5" PointX="1" PointY="9.5" Height="1.4970304361979157" />
-        <EntityTypeShape EntityType="ContractsModel.Expenses" Width="1.5" PointX="3.375" PointY="9" Height="2.4014493815104174" />
-        <AssociationConnector Association="ContractsModel.FK_Expenses_Contractee" >
-          <ConnectorPoint PointX="3.875" PointY="8.2494921875" />
-          <ConnectorPoint PointX="3.875" PointY="9" />
-        </AssociationConnector>
-        <AssociationConnector Association="ContractsModel.FK_Expenses_Expense_Type_LU" >
-          <ConnectorPoint PointX="2.5" PointY="10.248515218098959" />
-          <ConnectorPoint PointX="3.375" PointY="10.248515218098959" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="ContractsModel.Income" Width="1.5" PointX="5.25" PointY="9.5" Height="2.0999763997395817" />
-        <AssociationConnector Association="ContractsModel.FK_Income_Contracts" >
-          <ConnectorPoint PointX="5.2660128437500004" PointY="5.7494108072916656" />
-          <ConnectorPoint PointX="5.2660128437500004" PointY="9.5" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="ContractsModel.Version" Width="1.5" PointX="7.5" PointY="7.625" Height="1.7879850260416674" />
-        <EntityTypeShape EntityType="ContractsModel.sysdiagram" Width="1.5" PointX="7.375" PointY="10.75" Height="1.9802864583333388" />
-        <EntityTypeShape EntityType="ContractsModel.C__RefactorLog" Width="1.5" PointX="9.875" PointY="0.75" />
-        <EntityTypeShape EntityType="ContractsModel.Retirement" Width="2.25" PointX="10" PointY="8" />
-        <EntityTypeShape EntityType="ContractsModel.Retirement_Account_LU" Width="2.5" PointX="12.875" PointY="9" />
-        <AssociationConnector Association="ContractsModel.FK_Retirement_Retirement_Account_LU" />
-        <EntityTypeShape EntityType="ContractsModel.Estimated_Tax_payments" Width="1.5" PointX="9.625" PointY="10.625" />
-        <EntityTypeShape EntityType="ContractsModel.Quarter_LU" Width="1.5" PointX="11.625" PointY="11.5" />
-        <AssociationConnector Association="ContractsModel.FK_Quarter_LU1" />
-      </Diagram>
-    </Diagrams>
-  </Designer>
+    <edmx:Diagrams>
+      <edmx:Diagram Name="Model1">
+        <edmx:EntityTypeShape EntityType="ContractsModel.DFS_Hours" Width="1.5" PointX="0.5" PointY="0.5" Height="1.497030436197917" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.Contract_Status_LU" Width="1.875" PointX="8.125" PointY="0.75" Height="1.3462939453124996" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.Contractor" Width="2" PointX="2.625" PointY="0.5" Height="3.3263964843749996" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.Contract" Width="1.875" PointX="4.75" PointY="0.5" Height="5.2494108072916656" />
+        <edmx:AssociationConnector Association="ContractsModel.FK_Contracts_Contract_Status_LU">
+          <edmx:ConnectorPoint PointX="8.125" PointY="1.5478417968750002" />
+          <edmx:ConnectorPoint PointX="6.625" PointY="1.5478417968750002" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="ContractsModel.FK_Contracts_Contractors">
+          <edmx:ConnectorPoint PointX="4.625" PointY="2.1631982421875" />
+          <edmx:ConnectorPoint PointX="4.75" PointY="2.1631982421875" />
+        </edmx:AssociationConnector>
+        <edmx:EntityTypeShape EntityType="ContractsModel.Deliverable" Width="1.5" PointX="2.625" PointY="3" Height="2.4014493815104174" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.Deliverable_Status_Lu" Width="1.5" PointX="0.75" PointY="3.125" Height="1.3462939453124996" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.Task_Status_LU" Width="1.5" PointX="9.75" PointY="2.75" Height="1.3462939453124996" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.Task" Width="1.5" PointX="7.25" PointY="2.625" Height="2.0999763997395826" />
+        <edmx:AssociationConnector Association="ContractsModel.FK_Deliverable_Contracts">
+          <edmx:ConnectorPoint PointX="4.75" PointY="4.6631982421875" />
+          <edmx:ConnectorPoint PointX="4.125" PointY="4.6631982421875" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="ContractsModel.FK_Deliverable_Deliverable_Status_Lu">
+          <edmx:ConnectorPoint PointX="2.25" PointY="3.922841796875" />
+          <edmx:ConnectorPoint PointX="2.4145466666666664" PointY="3.9228417968749993" />
+          <edmx:ConnectorPoint PointX="2.5812133333333334" PointY="3.922841796875" />
+          <edmx:ConnectorPoint PointX="2.625" PointY="3.922841796875" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="ContractsModel.FK_Tasks_Task_Status_LU">
+          <edmx:ConnectorPoint PointX="9.75" PointY="3.42314697265625" />
+          <edmx:ConnectorPoint PointX="8.75" PointY="3.42314697265625" />
+        </edmx:AssociationConnector>
+        <edmx:EntityTypeShape EntityType="ContractsModel.Contractee" Width="1.5" PointX="2.875" PointY="5.5" Height="2.0999763997395817" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.Contracts_Hours" Width="1.5" PointX="6.875" PointY="5" Height="1.9492399088541665" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.Contracts_Rate" Width="1.5" PointX="0.875" PointY="5" Height="1.4970304361979165" />
+        <edmx:AssociationConnector Association="ContractsModel.FK_Contracts_Contractee">
+          <edmx:ConnectorPoint PointX="4.375" PointY="7.11469921875" />
+          <edmx:ConnectorPoint PointX="5.1826795104166674" PointY="7.1146992187499993" />
+          <edmx:ConnectorPoint PointX="5.3493461770833335" PointY="7.11469921875" />
+          <edmx:ConnectorPoint PointX="5.3816666666666668" PointY="7.1146992187499993" />
+          <edmx:ConnectorPoint PointX="5.5483333333333329" PointY="7.11469921875" />
+          <edmx:ConnectorPoint PointX="5.860936875" PointY="7.11469921875" />
+          <edmx:ConnectorPoint PointX="5.860936875" PointY="5.7494108072916656" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="ContractsModel.FK_Contracts_Contracts_Rate">
+          <edmx:ConnectorPoint PointX="2.375" PointY="5.797841796875" />
+          <edmx:ConnectorPoint PointX="2.49788" PointY="5.797841796875" />
+          <edmx:ConnectorPoint PointX="2.49788" PointY="0.37711999999999996" />
+          <edmx:ConnectorPoint PointX="5.6875" PointY="0.37711999999999996" />
+          <edmx:ConnectorPoint PointX="5.6875" PointY="0.5" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="ContractsModel.FK_Contracts_Hours_Contracts">
+          <edmx:ConnectorPoint PointX="6.625" PointY="5.3747054036458328" />
+          <edmx:ConnectorPoint PointX="6.875" PointY="5.3747054036458328" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="ContractsModel.FK_Tasks_Contracts">
+          <edmx:ConnectorPoint PointX="6.625" PointY="3.78125" />
+          <edmx:ConnectorPoint PointX="7.25" PointY="3.78125" />
+        </edmx:AssociationConnector>
+        <edmx:EntityTypeShape EntityType="ContractsModel.Contract_Rate_Freq_LU" Width="2" PointX="0.5" PointY="6.75" Height="1.3462939453125031" />
+        <edmx:AssociationConnector Association="ContractsModel.FK_Contracts_Contract_Rate_Freq_LU">
+          <edmx:ConnectorPoint PointX="0.5" PointY="7.547841796875" />
+          <edmx:ConnectorPoint PointX="0.25999999999999995" PointY="7.547841796875" />
+          <edmx:ConnectorPoint PointX="0.25999999999999995" PointY="8.58568359375" />
+          <edmx:ConnectorPoint PointX="3.7916666666666665" PointY="8.58568359375" />
+          <edmx:ConnectorPoint PointX="3.9583333333333335" PointY="8.58568359375" />
+          <edmx:ConnectorPoint PointX="5.1826795104166674" PointY="8.58568359375" />
+          <edmx:ConnectorPoint PointX="5.3493461770833335" PointY="8.58568359375" />
+          <edmx:ConnectorPoint PointX="5.465" PointY="8.58568359375" />
+          <edmx:ConnectorPoint PointX="5.465" PointY="6.84" />
+          <edmx:ConnectorPoint PointX="5.4070256875000009" PointY="6.84" />
+          <edmx:ConnectorPoint PointX="5.4070256875000009" PointY="5.7494108072916656" />
+        </edmx:AssociationConnector>
+        <edmx:EntityTypeShape EntityType="ContractsModel.Invoice_Header" Width="1.5" PointX="5.625" PointY="7" Height="2.0999763997395817" />
+        <edmx:AssociationConnector Association="ContractsModel.FK_Invoice_Header_Contracts">
+          <edmx:ConnectorPoint PointX="6.3054684375" PointY="5.7494108072916656" />
+          <edmx:ConnectorPoint PointX="6.3054684375" PointY="7" />
+        </edmx:AssociationConnector>
+        <edmx:EntityTypeShape EntityType="ContractsModel.Report_Types" Width="1.5" PointX="8.5" PointY="4.875" Height="1.3462939453125031" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.Report" Width="1.5" PointX="10.25" PointY="4.875" Height="2.0999763997395888" />
+        <edmx:AssociationConnector Association="ContractsModel.FK_Reports_Report_Types">
+          <edmx:ConnectorPoint PointX="10" PointY="5.5481469726562516" />
+          <edmx:ConnectorPoint PointX="10.25" PointY="5.5481469726562516" />
+        </edmx:AssociationConnector>
+        <edmx:EntityTypeShape EntityType="ContractsModel.Expense_Type_LU" Width="1.5" PointX="1" PointY="9.5" Height="1.4970304361979157" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.Expenses" Width="1.5" PointX="3.375" PointY="9" Height="2.4014493815104174" />
+        <edmx:AssociationConnector Association="ContractsModel.FK_Expenses_Contractee">
+          <edmx:ConnectorPoint PointX="3.875" PointY="8.2494921875" />
+          <edmx:ConnectorPoint PointX="3.875" PointY="9" />
+        </edmx:AssociationConnector>
+        <edmx:AssociationConnector Association="ContractsModel.FK_Expenses_Expense_Type_LU">
+          <edmx:ConnectorPoint PointX="2.5" PointY="10.248515218098959" />
+          <edmx:ConnectorPoint PointX="3.375" PointY="10.248515218098959" />
+        </edmx:AssociationConnector>
+        <edmx:EntityTypeShape EntityType="ContractsModel.Income" Width="1.5" PointX="5.25" PointY="9.5" Height="2.0999763997395817" />
+        <edmx:AssociationConnector Association="ContractsModel.FK_Income_Contracts">
+          <edmx:ConnectorPoint PointX="5.2660128437500004" PointY="5.7494108072916656" />
+          <edmx:ConnectorPoint PointX="5.2660128437500004" PointY="9.5" />
+        </edmx:AssociationConnector>
+        <edmx:EntityTypeShape EntityType="ContractsModel.Version" Width="1.5" PointX="7.5" PointY="7.625" Height="1.7879850260416674" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.sysdiagram" Width="1.5" PointX="7.375" PointY="10.75" Height="1.9802864583333388" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.C__RefactorLog" Width="1.5" PointX="9.875" PointY="0.75" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.Retirement" Width="2.25" PointX="10" PointY="8" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.Retirement_Account_LU" Width="2.5" PointX="12.875" PointY="9" />
+        <edmx:AssociationConnector Association="ContractsModel.FK_Retirement_Retirement_Account_LU" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.Estimated_Tax_payments" Width="1.5" PointX="9.625" PointY="10.625" />
+        <edmx:EntityTypeShape EntityType="ContractsModel.Quarter_LU" Width="1.5" PointX="11.625" PointY="11.5" />
+        <edmx:AssociationConnector Association="ContractsModel.FK_Quarter_LU1" />
+      </edmx:Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
 </edmx:Edmx>
