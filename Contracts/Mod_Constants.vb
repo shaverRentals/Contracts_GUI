@@ -8,7 +8,7 @@
     Public Const ReportGroup_Contracts = "Contracts"
     Public Const ReportGroup_TimeAndMoney = "TimeAndMoney"
 
-    Public Const ContractFolder = "C:\Users\Chad\Documents\Contracts"
+    Public Const ContractFolder = "C:\Users\chad\OneDrive\Documents\Contracts"
 
     Public Const SP_Update_Month_Cats = "update_Months_Hours"
     Public Const SP_Update_Tax_Year = "update_Expense_Tax_Year"
